@@ -1,0 +1,18 @@
+/*
+ * Error.cpp
+ *
+ *  Created on: Aug 11, 2022
+ *      Author: omarh
+ */
+
+#include "Error.h"
+
+Error::Error() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Error::~Error() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,52 @@
+/*
+ * DBmanager.cpp
+ *
+ *  Created on: Aug 14, 2022
+ *      Author: omarh
+ */
+
+#include "DBmanager.h"
+#include "User.h"
+
+#include <fstream>
+DBmanager::DBmanager() {
+	// TODO Auto-generated constructor stub
+
+}
+
+DBmanager::~DBmanager() {
+	// TODO Auto-generated destructor stub
+}
+
+User DBmanager::get_user_login(std::string username, std::string password){
+	User user;
+	const std::string path = usersdb.get_path();
+	read_file_lines()
+	return user;
+}
+
+void DBmanager::read_file_lines(std::string path, std::vector<std::string> &lines)
+{
+	std::fstream file_handler(path.c_str());
+	if (file_handler.fail())
+	{
+		throw "Can't open file";
+	}
+
+	std::string line;
+	/* check if file is empty */
+	if (file_handler.peek() == std::ifstream::traits_type::eof())
+	{
+		file_handler.close();
+		return;
+	}
+
+	while (getline(file_handler, line))
+	{
+		if (line.size() == 0)
+			continue;
+		lines.push_back(line);
+	}
+
+	file_handler.close();
+}

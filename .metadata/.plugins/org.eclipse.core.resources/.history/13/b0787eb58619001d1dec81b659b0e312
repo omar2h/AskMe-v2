@@ -1,0 +1,17 @@
+/*
+ * Inputscanner.h
+ *
+ *  Created on: Aug 11, 2022
+ *      Author: omarh
+ */
+
+#ifndef INPUTSCANNER_H_
+#define INPUTSCANNER_H_
+
+class Input_scanner {
+public:
+	Input_scanner();
+	virtual ~Input_scanner();
+};
+
+#endif /* INPUTSCANNER_H_ */

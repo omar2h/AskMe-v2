@@ -1,0 +1,42 @@
+/*
+ * Authenticator.cpp
+ *
+ *  Created on: Aug 11, 2022
+ *      Author: omarh
+ */
+
+#include "Authenticator.h"
+#include <iostream>
+
+Authenticator::Authenticator() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Authenticator::~Authenticator() {
+	// TODO Auto-generated destructor stub
+}
+
+void Authenticator::access(const int choice){
+	if (choice == 1)
+				{
+					if (login_handler.login(user))
+					{
+						std::cout << "\n-------------- Logged In Successfully -------------\n\n";
+
+						main_menu(user);
+						break;
+					}
+					else
+						/* Wrong UserName/Password */
+						error.print(2);
+				}
+
+				else if (choice == 2)
+				{
+					if (signup_handler.signup())
+						std::cout << "\n-------------- Signed Up Successfully -------------\n\n";
+				}
+				else if (choice == 3)
+					exit(0);
+}

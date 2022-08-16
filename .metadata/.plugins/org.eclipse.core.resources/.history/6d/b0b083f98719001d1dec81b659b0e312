@@ -1,0 +1,17 @@
+/*
+ * Authenticator.h
+ *
+ *  Created on: Aug 11, 2022
+ *      Author: omarh
+ */
+
+#ifndef AUTHENTICATOR_H_
+#define AUTHENTICATOR_H_
+
+class Authenticator {
+public:
+	Authenticator();
+	virtual ~Authenticator();
+};
+
+#endif /* AUTHENTICATOR_H_ */

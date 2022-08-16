@@ -1,0 +1,18 @@
+/*
+ * Authenticator.cpp
+ *
+ *  Created on: Aug 11, 2022
+ *      Author: omarh
+ */
+
+#include "Authenticator.h"
+
+Authenticator::Authenticator() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Authenticator::~Authenticator() {
+	// TODO Auto-generated destructor stub
+}
+

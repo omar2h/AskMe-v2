@@ -1,0 +1,1494 @@
+16:06:33 **** Rebuild of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o askme-oo.exe main.o 
+Info: Nothing to build for askme-oo
+16:07:06 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o askme-oo.exe main.o 
+Info: Nothing to build for askme-oo
+15:15:02 **** Rebuild of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+In file included from ..\DBmanager.cpp:8:
+..\DBmanager.h:17:17: error: field 'usersdb' has incomplete type 'UsersDb'
+   17 |         UsersDb usersdb;
+      |                 ^~~~~~~
+..\DBmanager.h:13:7: note: forward declaration of 'class UsersDb'
+   13 | class UsersDb;
+      |       ^~~~~~~
+15:15:55 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+In file included from ..\DBmanager.cpp:8:
+..\DBmanager.h:17:17: error: field 'usersdb' has incomplete type 'UsersDb'
+   17 |         UsersDb usersdb;
+      |                 ^~~~~~~
+..\DBmanager.h:13:7: note: forward declaration of 'class UsersDb'
+   13 | class UsersDb;
+      |       ^~~~~~~
+15:16:37 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+In file included from ..\DBmanager.cpp:8:
+..\DBmanager.h:17:17: error: field 'usersdb' has incomplete type 'UsersDb'
+   17 |         UsersDb usersdb;
+      |                 ^~~~~~~
+..\DBmanager.h:13:7: note: forward declaration of 'class UsersDb'
+   13 | class UsersDb;
+      |       ^~~~~~~
+15:17:21 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+In file included from ..\DBmanager.cpp:8:
+..\DBmanager.h:17:17: error: field 'usersdb' has incomplete type 'UsersDb'
+   17 |         UsersDb usersdb;
+      |                 ^~~~~~~
+..\DBmanager.h:13:7: note: forward declaration of 'class UsersDb'
+   13 | class UsersDb;
+      |       ^~~~~~~
+15:23:16 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+In file included from ..\Loginhandler.cpp:10:
+..\DBmanager.h:17:17: error: field 'usersdb' has incomplete type 'UsersDb'
+   17 |         UsersDb usersdb;
+      |                 ^~~~~~~
+..\DBmanager.h:13:7: note: forward declaration of 'class UsersDb'
+   13 | class UsersDb;
+      |       ^~~~~~~
+..\Loginhandler.cpp: In member function 'bool Login_handler::login(User&)':
+..\Loginhandler.cpp:39:1: warning: control reaches end of non-void function [-Wreturn-type]
+   39 | }
+      | ^
+15:27:12 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+In file included from ..\Loginhandler.cpp:10:
+..\DBmanager.h:17:17: error: field 'usersdb' has incomplete type 'UsersDb'
+   17 |         UsersDb usersdb;
+      |                 ^~~~~~~
+..\DBmanager.h:13:7: note: forward declaration of 'class UsersDb'
+   13 | class UsersDb;
+      |       ^~~~~~~
+..\Loginhandler.cpp: In member function 'bool Login_handler::login(User&)':
+..\Loginhandler.cpp:39:1: warning: control reaches end of non-void function [-Wreturn-type]
+   39 | }
+      | ^
+15:30:47 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+..\Loginhandler.cpp: In member function 'bool Login_handler::login(User&)':
+..\Loginhandler.cpp:39:1: warning: control reaches end of non-void function [-Wreturn-type]
+   39 | }
+      | ^
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find App.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Authenticator.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+15:31:11 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find App.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Authenticator.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+15:32:32 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find App.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Authenticator.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+15:32:48 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find App.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Authenticator.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+15:32:58 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find App.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Authenticator.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+15:33:29 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find App.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Authenticator.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+15:39:00 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find App.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Authenticator.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+15:40:23 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+In file included from ..\App.cpp:12:
+..\Authenticator.h:16:23: error: field 'login_handler' has incomplete type 'Login_handler'
+   16 |         Login_handler login_handler{};
+      |                       ^~~~~~~~~~~~~
+..\Authenticator.h:11:7: note: forward declaration of 'class Login_handler'
+   11 | class Login_handler;
+      |       ^~~~~~~~~~~~~
+..\Authenticator.h:17:24: error: field 'signup_handler' has incomplete type 'Signup_handler'
+   17 |         Signup_handler signup_handler{};
+      |                        ^~~~~~~~~~~~~~
+..\Authenticator.h:12:7: note: forward declaration of 'class Signup_handler'
+   12 | class Signup_handler;
+      |       ^~~~~~~~~~~~~~
+..\App.cpp:27:13: error: no declaration matches 'std::string App::get_qText_from_user()'
+   27 | std::string App::get_qText_from_user()
+      |             ^~~
+..\App.cpp:27:13: note: no functions named 'std::string App::get_qText_from_user()'
+In file included from ..\App.cpp:8:
+..\App.h:14:7: note: 'class App' defined here
+   14 | class App {
+      |       ^~~
+..\App.cpp: In member function 'void App::run()':
+..\App.cpp:42:14: error: aggregate 'User user' has incomplete type and cannot be defined
+   42 |         User user;
+      |              ^~~~
+..\App.cpp:44:23: error: aggregate 'Login_handler login_handler' has incomplete type and cannot be defined
+   44 |         Login_handler login_handler;
+      |                       ^~~~~~~~~~~~~
+..\App.cpp:45:24: error: aggregate 'Signup_handler signup_handler' has incomplete type and cannot be defined
+   45 |         Signup_handler signup_handler;
+      |                        ^~~~~~~~~~~~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/stl_algobase.h:64,
+                 from C:/msys64/mingw64/include/c++/12.1.0/string:50,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/locale_classes.h:40,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/ios_base.h:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ostream:38,
+                 from C:/msys64/mingw64/include/c++/12.1.0/iostream:39,
+                 from ..\App.h:10:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h: In instantiation of 'struct std::pair<User, bool>':
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:191:11: error: 'std::pair<_T1, _T2>::first' has incomplete type
+  191 |       _T1 first;                 ///< The first member
+      |           ^~~~~
+..\App.h:12:7: note: forward declaration of 'class User'
+   12 | class User;
+      |       ^~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/move.h:57,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/exception_ptr.h:43,
+                 from C:/msys64/mingw64/include/c++/12.1.0/exception:168,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:39:
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_copy_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_copy_assignable<User>, std::is_copy_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:568:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1135 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_move_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_move_assignable<User>, std::is_move_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:578:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1156 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_default_constructible<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:172:12:   required from 'struct std::__and_<std::is_default_constructible<User>, std::is_default_constructible<bool>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<User>, std::__is_implicitly_default_constructible<bool> > > >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:395:59:   required by substitution of 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<User, bool>::pair() [with _U1 = User; _U2 = bool; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <missing>]'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+  989 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+..\App.cpp:47:31: error: no matching function for call to 'std::pair<User, bool>::pair()'
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  563 |         explicit constexpr pair(pair<_U1, _U2>&& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  553 |         constexpr pair(pair<_U1, _U2>&& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  543 |         explicit constexpr pair(_U1&& __x, _U2&& __y)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  534 |         constexpr pair(_U1&& __x, _U2&& __y)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::__not_<std::is_convertible<_U2, bool> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_U2, _T2> > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  523 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::is_convertible<_U2, bool> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_U2, _T2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  511 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::__not_<std::is_convertible<_Iter, User> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_Iter, _Iterator> > >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  499 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::is_convertible<_Iter, User> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_Iter, _Iterator> >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  487 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  447 |         explicit constexpr pair(const pair<_U1, _U2>& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  438 |         constexpr pair(const pair<_U1, _U2>& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  421 |       explicit constexpr pair(const _T1& __a, const _T2& __b)
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  411 |       constexpr pair(const _T1& __a, const _T2& __b)
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  396 |       explicit constexpr pair()
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note:   substitution of deduced template arguments resulted in errors seen above
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  384 |       constexpr pair()
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note:   template argument deduction/substitution failed:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:383:59: error: no type named 'type' in 'struct std::enable_if<false, bool>'
+  383 |                                    ::value, bool>::type = true>
+      |                                                           ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note: candidate: 'template<class ... _Args1, long long unsigned int ..._Indexes1, class ... _Args2, long long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = User; _T2 = bool]'
+  217 |         pair(tuple<_Args1...>&, tuple<_Args2...>&,
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 4 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note: candidate: 'template<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = User; _T2 = bool]'
+  200 |         pair(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 3 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = User; _T2 = bool]'
+  196 |       constexpr pair(pair&&) = default;         ///< Move constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note:   candidate expects 1 argument, 0 provided
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = User; _T2 = bool]'
+  195 |       constexpr pair(const pair&) = default;    ///< Copy constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note:   candidate expects 1 argument, 0 provided
+..\App.cpp:47:31: warning: unused variable 'userLoginPair' [-Wunused-variable]
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+15:42:10 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+In file included from ..\App.cpp:12:
+..\Authenticator.h:16:23: error: field 'login_handler' has incomplete type 'Login_handler'
+   16 |         Login_handler login_handler{};
+      |                       ^~~~~~~~~~~~~
+..\Authenticator.h:11:7: note: forward declaration of 'class Login_handler'
+   11 | class Login_handler;
+      |       ^~~~~~~~~~~~~
+..\App.cpp:27:13: error: no declaration matches 'std::string App::get_qText_from_user()'
+   27 | std::string App::get_qText_from_user()
+      |             ^~~
+..\App.cpp:27:13: note: no functions named 'std::string App::get_qText_from_user()'
+In file included from ..\App.cpp:8:
+..\App.h:14:7: note: 'class App' defined here
+   14 | class App {
+      |       ^~~
+..\App.cpp: In member function 'void App::run()':
+..\App.cpp:42:14: error: aggregate 'User user' has incomplete type and cannot be defined
+   42 |         User user;
+      |              ^~~~
+..\App.cpp:44:23: error: aggregate 'Login_handler login_handler' has incomplete type and cannot be defined
+   44 |         Login_handler login_handler;
+      |                       ^~~~~~~~~~~~~
+..\App.cpp:45:9: error: 'Signup_handler' was not declared in this scope
+   45 |         Signup_handler signup_handler;
+      |         ^~~~~~~~~~~~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/stl_algobase.h:64,
+                 from C:/msys64/mingw64/include/c++/12.1.0/string:50,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/locale_classes.h:40,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/ios_base.h:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ostream:38,
+                 from C:/msys64/mingw64/include/c++/12.1.0/iostream:39,
+                 from ..\App.h:10:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h: In instantiation of 'struct std::pair<User, bool>':
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:191:11: error: 'std::pair<_T1, _T2>::first' has incomplete type
+  191 |       _T1 first;                 ///< The first member
+      |           ^~~~~
+..\App.h:12:7: note: forward declaration of 'class User'
+   12 | class User;
+      |       ^~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/move.h:57,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/exception_ptr.h:43,
+                 from C:/msys64/mingw64/include/c++/12.1.0/exception:168,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:39:
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_copy_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_copy_assignable<User>, std::is_copy_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:568:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1135 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_move_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_move_assignable<User>, std::is_move_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:578:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1156 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_default_constructible<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:172:12:   required from 'struct std::__and_<std::is_default_constructible<User>, std::is_default_constructible<bool>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<User>, std::__is_implicitly_default_constructible<bool> > > >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:395:59:   required by substitution of 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<User, bool>::pair() [with _U1 = User; _U2 = bool; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <missing>]'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+  989 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+..\App.cpp:47:31: error: no matching function for call to 'std::pair<User, bool>::pair()'
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  563 |         explicit constexpr pair(pair<_U1, _U2>&& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  553 |         constexpr pair(pair<_U1, _U2>&& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  543 |         explicit constexpr pair(_U1&& __x, _U2&& __y)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  534 |         constexpr pair(_U1&& __x, _U2&& __y)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::__not_<std::is_convertible<_U2, bool> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_U2, _T2> > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  523 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::is_convertible<_U2, bool> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_U2, _T2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  511 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::__not_<std::is_convertible<_Iter, User> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_Iter, _Iterator> > >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  499 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::is_convertible<_Iter, User> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_Iter, _Iterator> >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  487 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  447 |         explicit constexpr pair(const pair<_U1, _U2>& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  438 |         constexpr pair(const pair<_U1, _U2>& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  421 |       explicit constexpr pair(const _T1& __a, const _T2& __b)
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  411 |       constexpr pair(const _T1& __a, const _T2& __b)
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  396 |       explicit constexpr pair()
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note:   substitution of deduced template arguments resulted in errors seen above
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  384 |       constexpr pair()
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note:   template argument deduction/substitution failed:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:383:59: error: no type named 'type' in 'struct std::enable_if<false, bool>'
+  383 |                                    ::value, bool>::type = true>
+      |                                                           ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note: candidate: 'template<class ... _Args1, long long unsigned int ..._Indexes1, class ... _Args2, long long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = User; _T2 = bool]'
+  217 |         pair(tuple<_Args1...>&, tuple<_Args2...>&,
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 4 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note: candidate: 'template<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = User; _T2 = bool]'
+  200 |         pair(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 3 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = User; _T2 = bool]'
+  196 |       constexpr pair(pair&&) = default;         ///< Move constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note:   candidate expects 1 argument, 0 provided
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = User; _T2 = bool]'
+  195 |       constexpr pair(const pair&) = default;    ///< Copy constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note:   candidate expects 1 argument, 0 provided
+..\App.cpp:47:31: warning: unused variable 'userLoginPair' [-Wunused-variable]
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+15:43:12 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+In file included from ..\Authenticator.cpp:8:
+..\Authenticator.h:16:23: error: field 'login_handler' has incomplete type 'Login_handler'
+   16 |         Login_handler login_handler;
+      |                       ^~~~~~~~~~~~~
+..\Authenticator.h:11:7: note: forward declaration of 'class Login_handler'
+   11 | class Login_handler;
+      |       ^~~~~~~~~~~~~
+15:44:56 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+In file included from ..\App.cpp:12:
+..\Authenticator.h:16:23: error: field 'login_handler' has incomplete type 'Login_handler'
+   16 |         Login_handler login_handler;
+      |                       ^~~~~~~~~~~~~
+..\Authenticator.h:11:7: note: forward declaration of 'class Login_handler'
+   11 | class Login_handler;
+      |       ^~~~~~~~~~~~~
+..\App.cpp:27:13: error: no declaration matches 'std::string App::get_qText_from_user()'
+   27 | std::string App::get_qText_from_user()
+      |             ^~~
+..\App.cpp:27:13: note: no functions named 'std::string App::get_qText_from_user()'
+In file included from ..\App.cpp:8:
+..\App.h:14:7: note: 'class App' defined here
+   14 | class App {
+      |       ^~~
+..\App.cpp: In member function 'void App::run()':
+..\App.cpp:42:14: error: aggregate 'User user' has incomplete type and cannot be defined
+   42 |         User user;
+      |              ^~~~
+..\App.cpp:44:23: error: aggregate 'Login_handler login_handler' has incomplete type and cannot be defined
+   44 |         Login_handler login_handler;
+      |                       ^~~~~~~~~~~~~
+..\App.cpp:45:9: error: 'Signup_handler' was not declared in this scope
+   45 |         Signup_handler signup_handler;
+      |         ^~~~~~~~~~~~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/stl_algobase.h:64,
+                 from C:/msys64/mingw64/include/c++/12.1.0/string:50,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/locale_classes.h:40,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/ios_base.h:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ostream:38,
+                 from C:/msys64/mingw64/include/c++/12.1.0/iostream:39,
+                 from ..\App.h:10:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h: In instantiation of 'struct std::pair<User, bool>':
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:191:11: error: 'std::pair<_T1, _T2>::first' has incomplete type
+  191 |       _T1 first;                 ///< The first member
+      |           ^~~~~
+..\App.h:12:7: note: forward declaration of 'class User'
+   12 | class User;
+      |       ^~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/move.h:57,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/exception_ptr.h:43,
+                 from C:/msys64/mingw64/include/c++/12.1.0/exception:168,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:39:
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_copy_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_copy_assignable<User>, std::is_copy_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:568:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1135 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_move_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_move_assignable<User>, std::is_move_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:578:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1156 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_default_constructible<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:172:12:   required from 'struct std::__and_<std::is_default_constructible<User>, std::is_default_constructible<bool>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<User>, std::__is_implicitly_default_constructible<bool> > > >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:395:59:   required by substitution of 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<User, bool>::pair() [with _U1 = User; _U2 = bool; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <missing>]'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+  989 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+..\App.cpp:47:31: error: no matching function for call to 'std::pair<User, bool>::pair()'
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  563 |         explicit constexpr pair(pair<_U1, _U2>&& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  553 |         constexpr pair(pair<_U1, _U2>&& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  543 |         explicit constexpr pair(_U1&& __x, _U2&& __y)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  534 |         constexpr pair(_U1&& __x, _U2&& __y)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::__not_<std::is_convertible<_U2, bool> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_U2, _T2> > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  523 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::is_convertible<_U2, bool> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_U2, _T2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  511 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::__not_<std::is_convertible<_Iter, User> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_Iter, _Iterator> > >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  499 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::is_convertible<_Iter, User> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_Iter, _Iterator> >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  487 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  447 |         explicit constexpr pair(const pair<_U1, _U2>& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  438 |         constexpr pair(const pair<_U1, _U2>& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  421 |       explicit constexpr pair(const _T1& __a, const _T2& __b)
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  411 |       constexpr pair(const _T1& __a, const _T2& __b)
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  396 |       explicit constexpr pair()
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note:   substitution of deduced template arguments resulted in errors seen above
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  384 |       constexpr pair()
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note:   template argument deduction/substitution failed:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:383:59: error: no type named 'type' in 'struct std::enable_if<false, bool>'
+  383 |                                    ::value, bool>::type = true>
+      |                                                           ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note: candidate: 'template<class ... _Args1, long long unsigned int ..._Indexes1, class ... _Args2, long long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = User; _T2 = bool]'
+  217 |         pair(tuple<_Args1...>&, tuple<_Args2...>&,
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 4 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note: candidate: 'template<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = User; _T2 = bool]'
+  200 |         pair(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 3 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = User; _T2 = bool]'
+  196 |       constexpr pair(pair&&) = default;         ///< Move constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note:   candidate expects 1 argument, 0 provided
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = User; _T2 = bool]'
+  195 |       constexpr pair(const pair&) = default;    ///< Copy constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note:   candidate expects 1 argument, 0 provided
+..\App.cpp:47:31: warning: unused variable 'userLoginPair' [-Wunused-variable]
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+16:09:41 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+In file included from ..\Authenticator.cpp:9:
+..\Loginhandler.h:12:7: error: redefinition of 'class Login_handler'
+   12 | class Login_handler {
+      |       ^~~~~~~~~~~~~
+In file included from ..\Authenticator.cpp:8:
+..\Authenticator.h:12:7: note: previous definition of 'class Login_handler'
+   12 | class Login_handler {
+      |       ^~~~~~~~~~~~~
+16:10:09 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+..\App.cpp:27:13: error: no declaration matches 'std::string App::get_qText_from_user()'
+   27 | std::string App::get_qText_from_user()
+      |             ^~~
+..\App.cpp:27:13: note: no functions named 'std::string App::get_qText_from_user()'
+In file included from ..\App.cpp:8:
+..\App.h:14:7: note: 'class App' defined here
+   14 | class App {
+      |       ^~~
+..\App.cpp: In member function 'void App::run()':
+..\App.cpp:42:14: error: aggregate 'User user' has incomplete type and cannot be defined
+   42 |         User user;
+      |              ^~~~
+..\App.cpp:45:9: error: 'Signup_handler' was not declared in this scope
+   45 |         Signup_handler signup_handler;
+      |         ^~~~~~~~~~~~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/stl_algobase.h:64,
+                 from C:/msys64/mingw64/include/c++/12.1.0/string:50,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/locale_classes.h:40,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/ios_base.h:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ostream:38,
+                 from C:/msys64/mingw64/include/c++/12.1.0/iostream:39,
+                 from ..\App.h:10:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h: In instantiation of 'struct std::pair<User, bool>':
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:191:11: error: 'std::pair<_T1, _T2>::first' has incomplete type
+  191 |       _T1 first;                 ///< The first member
+      |           ^~~~~
+..\App.h:12:7: note: forward declaration of 'class User'
+   12 | class User;
+      |       ^~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/move.h:57,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/exception_ptr.h:43,
+                 from C:/msys64/mingw64/include/c++/12.1.0/exception:168,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:39:
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_copy_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_copy_assignable<User>, std::is_copy_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:568:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1135 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_move_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_move_assignable<User>, std::is_move_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:578:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1156 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_default_constructible<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:172:12:   required from 'struct std::__and_<std::is_default_constructible<User>, std::is_default_constructible<bool>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<User>, std::__is_implicitly_default_constructible<bool> > > >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:395:59:   required by substitution of 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<User, bool>::pair() [with _U1 = User; _U2 = bool; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <missing>]'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+  989 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+..\App.cpp:47:31: error: no matching function for call to 'std::pair<User, bool>::pair()'
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  563 |         explicit constexpr pair(pair<_U1, _U2>&& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  553 |         constexpr pair(pair<_U1, _U2>&& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  543 |         explicit constexpr pair(_U1&& __x, _U2&& __y)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  534 |         constexpr pair(_U1&& __x, _U2&& __y)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::__not_<std::is_convertible<_U2, bool> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_U2, _T2> > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  523 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::is_convertible<_U2, bool> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_U2, _T2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  511 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::__not_<std::is_convertible<_Iter, User> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_Iter, _Iterator> > >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  499 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::is_convertible<_Iter, User> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_Iter, _Iterator> >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  487 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  447 |         explicit constexpr pair(const pair<_U1, _U2>& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  438 |         constexpr pair(const pair<_U1, _U2>& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  421 |       explicit constexpr pair(const _T1& __a, const _T2& __b)
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  411 |       constexpr pair(const _T1& __a, const _T2& __b)
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  396 |       explicit constexpr pair()
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note:   substitution of deduced template arguments resulted in errors seen above
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  384 |       constexpr pair()
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note:   template argument deduction/substitution failed:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:383:59: error: no type named 'type' in 'struct std::enable_if<false, bool>'
+  383 |                                    ::value, bool>::type = true>
+      |                                                           ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note: candidate: 'template<class ... _Args1, long long unsigned int ..._Indexes1, class ... _Args2, long long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = User; _T2 = bool]'
+  217 |         pair(tuple<_Args1...>&, tuple<_Args2...>&,
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 4 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note: candidate: 'template<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = User; _T2 = bool]'
+  200 |         pair(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 3 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = User; _T2 = bool]'
+  196 |       constexpr pair(pair&&) = default;         ///< Move constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note:   candidate expects 1 argument, 0 provided
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = User; _T2 = bool]'
+  195 |       constexpr pair(const pair&) = default;    ///< Copy constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note:   candidate expects 1 argument, 0 provided
+..\App.cpp:47:31: warning: unused variable 'userLoginPair' [-Wunused-variable]
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+16:12:03 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+..\App.cpp:27:13: error: no declaration matches 'std::string App::get_qText_from_user()'
+   27 | std::string App::get_qText_from_user()
+      |             ^~~
+..\App.cpp:27:13: note: no functions named 'std::string App::get_qText_from_user()'
+In file included from ..\App.cpp:8:
+..\App.h:14:7: note: 'class App' defined here
+   14 | class App {
+      |       ^~~
+..\App.cpp: In member function 'void App::run()':
+..\App.cpp:42:14: error: aggregate 'User user' has incomplete type and cannot be defined
+   42 |         User user;
+      |              ^~~~
+..\App.cpp:45:9: error: 'Signup_handler' was not declared in this scope
+   45 |         Signup_handler signup_handler;
+      |         ^~~~~~~~~~~~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/stl_algobase.h:64,
+                 from C:/msys64/mingw64/include/c++/12.1.0/string:50,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/locale_classes.h:40,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/ios_base.h:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ostream:38,
+                 from C:/msys64/mingw64/include/c++/12.1.0/iostream:39,
+                 from ..\App.h:10:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h: In instantiation of 'struct std::pair<User, bool>':
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:191:11: error: 'std::pair<_T1, _T2>::first' has incomplete type
+  191 |       _T1 first;                 ///< The first member
+      |           ^~~~~
+..\App.h:12:7: note: forward declaration of 'class User'
+   12 | class User;
+      |       ^~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/bits/move.h:57,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/exception_ptr.h:43,
+                 from C:/msys64/mingw64/include/c++/12.1.0/exception:168,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:39:
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_copy_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_copy_assignable<User>, std::is_copy_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:568:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1135 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1135:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_move_assignable<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:167:12:   required from 'struct std::__and_<std::is_move_assignable<User>, std::is_move_assignable<bool> >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:578:7:   required from 'struct std::pair<User, bool>'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+ 1156 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:1156:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+C:/msys64/mingw64/include/c++/12.1.0/type_traits: In instantiation of 'struct std::is_default_constructible<User>':
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:172:12:   required from 'struct std::__and_<std::is_default_constructible<User>, std::is_default_constructible<bool>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<User>, std::__is_implicitly_default_constructible<bool> > > >'
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:395:59:   required by substitution of 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<User, bool>::pair() [with _U1 = User; _U2 = bool; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <missing>]'
+..\App.cpp:47:24:   required from here
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: error: static assertion failed: template argument must be a complete class or an unbounded array
+  989 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/type_traits:989:52: note: 'std::__is_complete_or_unbounded<__type_identity<User> >((std::__type_identity<User>(), std::__type_identity<User>()))' evaluates to false
+..\App.cpp:47:31: error: no matching function for call to 'std::pair<User, bool>::pair()'
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  563 |         explicit constexpr pair(pair<_U1, _U2>&& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:563:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  553 |         constexpr pair(pair<_U1, _U2>&& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:553:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  543 |         explicit constexpr pair(_U1&& __x, _U2&& __y)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:543:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  534 |         constexpr pair(_U1&& __x, _U2&& __y)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:534:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::__not_<std::is_convertible<_U2, bool> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_U2, _T2> > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  523 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:523:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note: candidate: 'template<class _U2, typename std::enable_if<std::__and_<std::is_pointer<User>, std::__not_<std::is_reference<_Tp> >, std::is_constructible<bool, _U2>, std::__not_<std::is_constructible<bool, const _U1&> >, std::is_convertible<_U2, bool> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(__zero_as_null_pointer_constant, _U2&&, ...) [with typename std::enable_if<std::__and_<std::is_pointer<_Tp>, std::__not_<std::is_reference<_U1> >, std::is_constructible<_T2, _U2>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_U2, _T2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  511 |         pair(__zero_as_null_pointer_constant, _U2&& __y, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:511:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::__not_<std::is_convertible<_Iter, User> > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::__not_<std::is_convertible<_Iter, _Iterator> > >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  499 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:499:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note: candidate: 'template<class _U1, typename std::enable_if<std::__and_<std::__not_<std::is_reference<_Tp> >, std::is_pointer<bool>, std::is_constructible<User, _U1>, std::__not_<std::is_constructible<User, const _U1&> >, std::is_convertible<_Iter, User> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, __zero_as_null_pointer_constant, ...) [with typename std::enable_if<std::__and_<std::__not_<std::is_reference<_U1> >, std::is_pointer<_T2>, std::is_constructible<_T1, _U1>, std::__not_<std::is_constructible<_T1, const _U1&> >, std::is_convertible<_Iter, _Iterator> >::value, bool>::type <anonymous> = _U1; _T1 = User; _T2 = bool]'
+  487 |         pair(_U1&& __x, __zero_as_null_pointer_constant, ...)
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:487:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  447 |         explicit constexpr pair(const pair<_U1, _U2>& __p)
+      |                            ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:447:28: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<User, _U1>::value) || (! std::is_same<bool, _U2>::value)), User, bool>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  438 |         constexpr pair(const pair<_U1, _U2>& __p)
+      |                   ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:438:19: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 1 argument, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  421 |       explicit constexpr pair(const _T1& __a, const _T2& __b)
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:421:26: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U2 = _U1; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  411 |       constexpr pair(const _T1& __a, const _T2& __b)
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:411:17: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 2 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  396 |       explicit constexpr pair()
+      |                          ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:396:26: note:   substitution of deduced template arguments resulted in errors seen above
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note: candidate: 'template<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U2 = _U1; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = _U2; _T1 = User; _T2 = bool]'
+  384 |       constexpr pair()
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:384:17: note:   template argument deduction/substitution failed:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:383:59: error: no type named 'type' in 'struct std::enable_if<false, bool>'
+  383 |                                    ::value, bool>::type = true>
+      |                                                           ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note: candidate: 'template<class ... _Args1, long long unsigned int ..._Indexes1, class ... _Args2, long long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = User; _T2 = bool]'
+  217 |         pair(tuple<_Args1...>&, tuple<_Args2...>&,
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:217:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 4 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note: candidate: 'template<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = User; _T2 = bool]'
+  200 |         pair(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+      |         ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:200:9: note:   template argument deduction/substitution failed:
+..\App.cpp:47:31: note:   candidate expects 3 arguments, 0 provided
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = User; _T2 = bool]'
+  196 |       constexpr pair(pair&&) = default;         ///< Move constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:196:17: note:   candidate expects 1 argument, 0 provided
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note: candidate: 'constexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = User; _T2 = bool]'
+  195 |       constexpr pair(const pair&) = default;    ///< Copy constructor
+      |                 ^~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_pair.h:195:17: note:   candidate expects 1 argument, 0 provided
+..\App.cpp:47:31: warning: unused variable 'userLoginPair' [-Wunused-variable]
+   47 |         std::pair<User, bool> userLoginPair;
+      |                               ^~~~~~~~~~~~~
+16:13:13 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+16:14:16 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+16:14:24 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+16:14:58 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+16:16:13 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Error.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Inputscanner.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Menu.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find Signuphandler.o: No such file or directory
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find User.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+16:16:51 **** Clean-only build of configuration Debug for project askme-oo ****
+rm -rf Menu.d Menu.o Inputscanner.o User.o User.d askme-oo.exe App.o Authenticator.o Authenticator.d main.o Inputscanner.d App.d UsersDb.d Loginhandler.o UsersDb.o Loginhandler.d DBmanager.o Error.o main.d Signuphandler.d Error.d Signuphandler.o DBmanager.d 
+16:16:51 **** Rebuild of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o User.o "..\\User.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Inputscanner.o "..\\Inputscanner.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Error.o "..\\Error.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menu.o "..\\Menu.cpp" 
+In file included from ..\Menu.cpp:8:
+..\Menu.h:19:59: error: 'string' is not a member of 'std'
+   19 |                         void print(const std::vector<std::string> menuStrings) const;
+      |                                                           ^~~~~~
+..\Menu.h:11:1: note: 'std::string' is defined in header '<string>'; did you forget to '#include <string>'?
+   10 | #include <vector>
+  +++ |+#include <string>
+   11 | class Menu {
+..\Menu.h:19:65: error: template argument 1 is invalid
+   19 |                         void print(const std::vector<std::string> menuStrings) const;
+      |                                                                 ^
+..\Menu.h:19:65: error: template argument 2 is invalid
+..\Menu.h:27:51: error: 'string' in namespace 'std' does not name a type
+   27 |                         int get_choice(const std::string);
+      |                                                   ^~~~~~
+..\Menu.h:27:46: note: 'std::string' is defined in header '<string>'; did you forget to '#include <string>'?
+   27 |                         int get_choice(const std::string);
+      |                                              ^~~
+..\Menu.cpp: In member function 'void Menu::menu_login()':
+..\Menu.cpp:29:15: error: cannot convert 'std::vector<std::__cxx11::basic_string<char> >' to 'int'
+   29 |         print(menuStrings);
+      |               ^~~~~~~~~~~
+      |               |
+      |               std::vector<std::__cxx11::basic_string<char> >
+..\Menu.h:19:67: note:   initializing argument 1 of 'void Menu::print(int) const'
+   19 |                         void print(const std::vector<std::string> menuStrings) const;
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+..\Menu.cpp: In member function 'void Menu::menu_main()':
+..\Menu.cpp:46:15: error: cannot convert 'std::vector<std::__cxx11::basic_string<char> >' to 'int'
+   46 |         print(menuStrings);
+      |               ^~~~~~~~~~~
+      |               |
+      |               std::vector<std::__cxx11::basic_string<char> >
+..\Menu.h:19:67: note:   initializing argument 1 of 'void Menu::print(int) const'
+   19 |                         void print(const std::vector<std::string> menuStrings) const;
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+..\Menu.cpp: At global scope:
+..\Menu.cpp:49:6: error: no declaration matches 'void Menu::print(std::vector<std::__cxx11::basic_string<char> >) const'
+   49 | void Menu::print(const std::vector<std::string> menuStrings) const
+      |      ^~~~
+..\Menu.h:19:30: note: candidate is: 'void Menu::print(int) const'
+   19 |                         void print(const std::vector<std::string> menuStrings) const;
+      |                              ^~~~~
+..\Menu.h:11:7: note: 'class Menu' defined here
+   11 | class Menu {
+      |       ^~~~
+..\Menu.cpp:56:5: error: no declaration matches 'int Menu::get_choice(std::string)'
+   56 | int Menu::get_choice(const std::string menuList)
+      |     ^~~~
+..\Menu.h:27:29: note: candidate is: 'int Menu::get_choice(int)'
+   27 |                         int get_choice(const std::string);
+      |                             ^~~~~~~~~~
+..\Menu.h:11:7: note: 'class Menu' defined here
+   11 | class Menu {
+      |       ^~~~
+16:17:49 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menu.o "..\\Menu.cpp" 
+..\Menu.cpp: In member function 'void Menu::print(std::vector<std::__cxx11::basic_string<char> >) const':
+..\Menu.cpp:51:27: error: binding reference of type 'std::string&' {aka 'std::__cxx11::basic_string<char>&'} to 'const std::__cxx11::basic_string<char>' discards qualifiers
+   51 |     for(std::string& str: menuStrings){
+      |                           ^~~~~~~~~~~
+..\Menu.cpp:51:22: warning: loop variable 'str' of type 'std::string&' {aka 'std::__cxx11::basic_string<char>&'} binds to a temporary constructed from type 'const std::__cxx11::basic_string<char>' [-Wrange-loop-construct]
+   51 |     for(std::string& str: menuStrings){
+      |                      ^~~
+..\Menu.cpp:51:22: note: use non-reference type 'std::string' {aka 'std::__cxx11::basic_string<char>'} to make the copy explicit or 'const std::__cxx11::basic_string<char>&' to prevent copying
+..\Menu.cpp: In member function 'int Menu::get_choice(std::string)':
+..\Menu.cpp:59:11: error: cannot convert 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} to 'std::vector<std::__cxx11::basic_string<char> >'
+   59 |     print(menuList);
+      |           ^~~~~~~~
+      |           |
+      |           const std::string {aka const std::__cxx11::basic_string<char>}
+..\Menu.cpp:49:49: note:   initializing argument 1 of 'void Menu::print(std::vector<std::__cxx11::basic_string<char> >) const'
+   49 | void Menu::print(const std::vector<std::string> menuStrings) const
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+16:18:35 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menu.o "..\\Menu.cpp" 
+..\Menu.cpp: In member function 'int Menu::get_choice(std::string)':
+..\Menu.cpp:58:11: error: cannot convert 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} to 'std::vector<std::__cxx11::basic_string<char> >'
+   58 |     print(menuList);
+      |           ^~~~~~~~
+      |           |
+      |           const std::string {aka const std::__cxx11::basic_string<char>}
+..\Menu.cpp:48:49: note:   initializing argument 1 of 'void Menu::print(std::vector<std::__cxx11::basic_string<char> >) const'
+   48 | void Menu::print(const std::vector<std::string> menuStrings) const
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+16:20:03 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menu.o "..\\Menu.cpp" 
+..\Menu.cpp:55:5: error: no declaration matches 'int Menu::get_choice(std::vector<std::__cxx11::basic_string<char> >)'
+   55 | int Menu::get_choice(const std::vector<std::string> menuList)
+      |     ^~~~
+In file included from ..\Menu.cpp:8:
+..\Menu.h:29:29: note: candidate is: 'int Menu::get_choice(std::string)'
+   29 |                         int get_choice(const std::string);
+      |                             ^~~~~~~~~~
+..\Menu.h:13:7: note: 'class Menu' defined here
+   13 | class Menu {
+      |       ^~~~
+16:21:52 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menu.o "..\\Menu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+00:11:08 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+00:20:30 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Error.o "..\\Error.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+00:47:37 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+..\Signuphandler.cpp: In member function 'void Signup_handler::signup()':
+..\Signuphandler.cpp:28:26: error: 'std::string User::username' is private within this context
+   28 |         std::cin >> user.username >> user.password;
+      |                          ^~~~~~~~
+In file included from ..\Signuphandler.cpp:9:
+..\User.h:15:21: note: declared private here
+   15 |         std::string username{}, password{};
+      |                     ^~~~~~~~
+..\Signuphandler.cpp:28:43: error: 'std::string User::password' is private within this context
+   28 |         std::cin >> user.username >> user.password;
+      |                                           ^~~~~~~~
+..\User.h:15:33: note: declared private here
+   15 |         std::string username{}, password{};
+      |                                 ^~~~~~~~
+..\Signuphandler.cpp:36:14: error: 'bool User::allowAnonQs' is private within this context
+   36 |         user.allowAnonQs = ans == 'y' ? 1 : 0;
+      |              ^~~~~~~~~~~
+..\User.h:16:14: note: declared private here
+   16 |         bool allowAnonQs{};
+      |              ^~~~~~~~~~~
+00:53:05 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+..\Authenticator.cpp: In member function 'void Authenticator::access(int, User&)':
+..\Authenticator.cpp:38:42: error: could not convert '((Authenticator*)this)->Authenticator::signup_handler.Signup_handler::signup()' from 'void' to 'bool'
+   38 |                 if (signup_handler.signup())
+      |                     ~~~~~~~~~~~~~~~~~~~~~^~
+      |                                          |
+      |                                          void
+00:55:02 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Error.o "..\\Error.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::add_user(User&)':
+..\DBmanager.cpp:40:14: error: 'int User::id' is private within this context
+   40 |         user.id = generate_id(path);
+      |              ^~
+In file included from ..\DBmanager.cpp:9:
+..\User.h:14:13: note: declared private here
+   14 |         int id{};
+      |             ^~
+..\DBmanager.cpp:42:48: error: 'int User::id' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                ^~
+..\User.h:14:13: note: declared private here
+   14 |         int id{};
+      |             ^~
+..\DBmanager.cpp:42:71: error: 'std::string User::username' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                                       ^~~~~~~~
+..\User.h:15:21: note: declared private here
+   15 |         std::string username{}, password{};
+      |                     ^~~~~~~~
+..\DBmanager.cpp:42:99: error: 'std::string User::password' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                                                                   ^~~~~~~~
+..\User.h:15:33: note: declared private here
+   15 |         std::string username{}, password{};
+      |                                 ^~~~~~~~
+..\DBmanager.cpp:42:142: error: 'bool User::allowAnonQs' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                                                                                                              ^~~~~~~~~~~
+..\User.h:16:14: note: declared private here
+   16 |         bool allowAnonQs{};
+      |              ^~~~~~~~~~~
+..\DBmanager.cpp: At global scope:
+..\DBmanager.cpp:73:6: error: default argument given for parameter 3 of 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)' [-fpermissive]
+   73 | void DBmanager::write_file_lines(std::string path, std::vector<std::string> &lines, bool append = true)
+      |      ^~~~~~~~~
+In file included from ..\DBmanager.cpp:8:
+..\DBmanager.h:21:14: note: previous specification in 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)' here
+   21 |         void write_file_lines(std::string path, std::vector<std::string> &lines, bool append = true);
+      |              ^~~~~~~~~~~~~~~~
+..\DBmanager.cpp: In member function 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)':
+..\DBmanager.cpp:90:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
+   90 |         return true;
+      |                ^~~~
+00:55:51 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o User.o "..\\User.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::add_user(User&)':
+..\DBmanager.cpp:42:48: error: 'int User::id' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                ^~
+In file included from ..\DBmanager.cpp:9:
+..\User.h:14:13: note: declared private here
+   14 |         int id{};
+      |             ^~
+..\DBmanager.cpp:42:71: error: 'std::string User::username' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                                       ^~~~~~~~
+..\User.h:15:21: note: declared private here
+   15 |         std::string username{}, password{};
+      |                     ^~~~~~~~
+..\DBmanager.cpp:42:99: error: 'std::string User::password' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                                                                   ^~~~~~~~
+..\User.h:15:33: note: declared private here
+   15 |         std::string username{}, password{};
+      |                                 ^~~~~~~~
+..\DBmanager.cpp:42:142: error: 'bool User::allowAnonQs' is private within this context
+   42 |         std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
+      |                                                                                                                                              ^~~~~~~~~~~
+..\User.h:16:14: note: declared private here
+   16 |         bool allowAnonQs{};
+      |              ^~~~~~~~~~~
+..\DBmanager.cpp: At global scope:
+..\DBmanager.cpp:73:6: error: default argument given for parameter 3 of 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)' [-fpermissive]
+   73 | void DBmanager::write_file_lines(std::string path, std::vector<std::string> &lines, bool append = true)
+      |      ^~~~~~~~~
+In file included from ..\DBmanager.cpp:8:
+..\DBmanager.h:21:14: note: previous specification in 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)' here
+   21 |         void write_file_lines(std::string path, std::vector<std::string> &lines, bool append = true);
+      |              ^~~~~~~~~~~~~~~~
+..\DBmanager.cpp: In member function 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)':
+..\DBmanager.cpp:90:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
+   90 |         return true;
+      |                ^~~~
+01:09:11 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp:73:6: error: default argument given for parameter 3 of 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)' [-fpermissive]
+   73 | void DBmanager::write_file_lines(std::string path, std::vector<std::string> &lines, bool append = true)
+      |      ^~~~~~~~~
+In file included from ..\DBmanager.cpp:8:
+..\DBmanager.h:21:14: note: previous specification in 'void DBmanager::write_file_lines(std::string, std::vector<std::__cxx11::basic_string<char> >&, bool)' here
+   21 |         void write_file_lines(std::string path, std::vector<std::string> &lines, bool append = true);
+      |              ^~~~~~~~~~~~~~~~
+01:09:54 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o User.o "..\\User.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+01:13:34 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+01:18:38 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
