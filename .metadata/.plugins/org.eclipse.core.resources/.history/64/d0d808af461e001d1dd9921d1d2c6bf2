@@ -1,0 +1,36 @@
+/*
+ * AppMainMenu.cpp
+ *
+ *  Created on: Aug 17, 2022
+ *      Author: omarh
+ */
+
+#include "AppMainMenu.h"
+#include "DBmanager.h"
+#include "Question.h"
+#include <iostream>
+#include <vector>
+#include <map>
+
+AppMainMenu::AppMainMenu() {
+	// TODO Auto-generated constructor stub
+
+}
+
+AppMainMenu::~AppMainMenu() {
+	// TODO Auto-generated destructor stub
+}
+
+void AppMainMenu::run(int choice, User&){
+	if(choice == PRINT_QUESTIONS_RECEIVED){
+
+	}
+}
+
+void AppMainMenu::print_questions_received(const int uId){
+	DBmanager DB;
+	/* map variable to store questions where the id is the key and vector of questions beginning with the questions followed by its children if any */
+	std::map<int, std::vector<Question>> mp;
+	/* Fill the map with all question the user received */
+	DB.get_all_Qs_to_user(uId, mp);
+}

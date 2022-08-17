@@ -7,6 +7,7 @@
 
 #include "Authenticator.h"
 #include "Error.h"
+#include "User.h"
 #include <iostream>
 
 Authenticator::Authenticator() {
@@ -19,31 +20,33 @@ Authenticator::~Authenticator() {
 }
 
 void Authenticator::access(const int choice, User& user){
-	Error error;
-	if (choice == 1)
+	if (choice == LOGIN)
 	{
 		try
 		{
 			login_handler.login(user);
 			std::cout << "\n-------------- Logged In Successfully -------------\n\n";
+			return;
 		}
 
 		catch(const int err){
-			error.print(err);
+			throw;
 		}
 	}
 
-	else if (choice == 2)
+	else if (choice == SIGNUP)
 	{
 		try
 		{
 			signup_handler.signup();
 			std::cout << "\n-------------- Signed Up Successfully -------------\n\n";
+			return;
 		}
 		catch(const int err){
-			error.print(err);
+			throw;
 		}
 	}
-	else if (choice == 3)
+	else if (choice == EXIT)
 		exit(0);
+
 }

@@ -1,0 +1,20 @@
+/*
+ * QuestionsDb.h
+ *
+ *  Created on: Aug 17, 2022
+ *      Author: omarh
+ */
+
+#ifndef QUESTIONSDB_H_
+#define QUESTIONSDB_H_
+
+#include <iostream>
+class QuestionsDb {
+	std::string path;
+	std::string del;
+public:
+	QuestionsDb();
+	virtual ~QuestionsDb();
+};
+
+#endif /* QUESTIONSDB_H_ */

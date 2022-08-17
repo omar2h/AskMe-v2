@@ -25,7 +25,7 @@ int Input_scanner::get_choice(const int low, const int high){
 }
 bool Input_scanner::verify_choice(const int choice, const int low, const int high)
 {
-	if (choice < low && choice > 3)
+	if (choice < low && choice > high)
 		return false;
 	return true;
 }

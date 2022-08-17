@@ -1,0 +1,17 @@
+/*
+ * Question.h
+ *
+ *  Created on: Aug 17, 2022
+ *      Author: omarh
+ */
+
+#ifndef QUESTION_H_
+#define QUESTION_H_
+
+class Question {
+public:
+	Question();
+	virtual ~Question();
+};
+
+#endif /* QUESTION_H_ */

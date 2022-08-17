@@ -24,7 +24,12 @@ User DBmanager::get_user_login(std::string username, std::string password){
 	const std::string path = usersdb.get_path();
 	const std::string del = usersdb.get_delimiter();
 	std::vector<std::string> lines;
+	try{
 	read_file_lines(path, lines);
+	}
+	catch(const int err){
+		throw;
+	}
 	for (auto &line : lines)
 	{
 		std::vector<std::string> v;
@@ -44,7 +49,7 @@ void DBmanager::add_user(User& user){
 		throw;
 	}
 	std::vector<std::string> lines;
-	std::string line = user.getIdString() + DELIMITER + user.getUsername() + DELIMITER + user.getPassword() + DELIMITER + user.getAllowAnonQsString();
+	std::string line = usersdb.get_user_string(user);
 	lines.push_back(line);
 	try{
 	write_file_lines(path, lines, true);
@@ -54,12 +59,48 @@ void DBmanager::add_user(User& user){
 	}
 }
 
+void DBmanager::get_Qs_to_user(const int uId, std::map<int, std::vector<Question>>& mp)
+{
+	const std::string path = questionsdb.get_path();
+	const std::string del = questionsdb.get_delimiter();
+	std::vector<std::string> lines;
+	try{
+	read_file_lines(path, lines);
+	}
+	catch(const int err){
+		throw;
+	}
+	for (auto &line : lines)
+	{
+		std::vector<std::string> v;
+		split_line_toVector(line, v, del);
+		questionsdb.get_Q_toUser(v, mp, uId);
+	}
+}
+
+void DBmanager::get_Qs_from_user(const int uId, std::vector<Question>& qv){
+	const std::string path = questionsdb.get_path();
+	const std::string del = questionsdb.get_delimiter();
+	std::vector<std::string> lines;
+	try{
+	read_file_lines(path, lines);
+	}
+	catch(const int err){
+		throw;
+	}
+	for (auto &line : lines)
+	{
+		std::vector<std::string> v;
+		split_line_toVector(line, v, del);
+		questionsdb.get_Q_fromUser(v, qv, uId);
+	}
+}
 void DBmanager::read_file_lines(std::string path, std::vector<std::string> &lines)
 {
 	std::fstream file_handler(path.c_str());
 	if (file_handler.fail())
 	{
-		throw "Can't open file";
+		throw 5;
 	}
 
 	std::string line;

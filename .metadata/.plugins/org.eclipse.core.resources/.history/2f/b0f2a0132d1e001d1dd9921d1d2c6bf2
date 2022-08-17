@@ -1,0 +1,54 @@
+/*
+ * Menu.cpp
+ *
+ *  Created on: Aug 11, 2022
+ *      Author: omarh
+ */
+
+#include "Menu.h"
+
+Menu::Menu() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Menu::~Menu() {
+	// TODO Auto-generated destructor stub
+}
+
+void Menu::menu_login()
+{
+	std::vector<std::string> menuStrings{};
+	menuStrings.push_back("Menu: \n");
+	menuStrings.push_back("\t1: Login\n");
+	menuStrings.push_back("\t2: Sign up\n");
+	menuStrings.push_back("\t3: Exit\n\n");
+	menuStrings.push_back("Please enter a number (1 - 3): ");
+
+	print(menuStrings);
+}
+
+void Menu::menu_main()
+{
+	std::vector<std::string> menuStrings{};
+	menuStrings.push_back("Print Questions Received");
+	menuStrings.push_back("Print Questions I Asked");
+	menuStrings.push_back("Answer Questions");
+	menuStrings.push_back("Delete Questions");
+	menuStrings.push_back("Ask Questions");
+	menuStrings.push_back("List System Users");
+	menuStrings.push_back("Feed");
+	menuStrings.push_back("Logout");
+	print(menuStrings);
+}
+
+void Menu::print(const std::vector<std::string> menuStrings) const
+{
+	int sz = (int)menuStrings.size();
+	std::cout<<"Menu:\n";
+    for(int i=0; i<sz; i++){
+    	std::cout<<"\t"<<i+1<<": "<<menuStrings[i]<<"\n";
+    }
+    std::cout<<"\nPlease enter a number (1 - "<<sz<<"): ";
+}
+

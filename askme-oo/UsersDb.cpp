@@ -64,6 +64,10 @@ bool UsersDb::check_user_login(std::vector<std::string>& v, User& user, const st
 	return false;
 }
 
+std::string UsersDb::get_user_string(User& user){
+	return user.getIdString() + del + user.getUsername() + del + user.getPassword() + del + user.getAllowAnonQsString();
+}
+
 //bool UsersDb::add_user(User &user)
 //{
 //	DbManager dbManager;

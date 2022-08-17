@@ -1,0 +1,17 @@
+/*
+ * QuestionsDb.h
+ *
+ *  Created on: Aug 17, 2022
+ *      Author: omarh
+ */
+
+#ifndef QUESTIONSDB_H_
+#define QUESTIONSDB_H_
+
+class QuestionsDb {
+public:
+	QuestionsDb();
+	virtual ~QuestionsDb();
+};
+
+#endif /* QUESTIONSDB_H_ */

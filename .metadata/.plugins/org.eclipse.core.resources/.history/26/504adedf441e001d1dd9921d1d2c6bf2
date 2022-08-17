@@ -1,0 +1,117 @@
+/*
+ * Question.cpp
+ *
+ *  Created on: Aug 17, 2022
+ *      Author: omarh
+ */
+
+#include "Question.h"
+
+Question::Question() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Question::~Question() {
+	// TODO Auto-generated destructor stub
+}
+
+int Question::getId(){
+	return id;
+}
+std::string Question::getIdString(){
+	return std::to_string(id);
+}
+int Question::getThreadId(){
+	return threadId;
+}
+std::string Question::getThreadIdString(){
+	return std::to_string(threadId);
+}
+int Question::getFromId(){
+	return fromId;
+}
+std::string Question::getFromIdString(){
+	return std::to_string(fromId);
+}
+int Question::getToId(){
+	return toId;
+}
+std::string Question::getToIdString(){
+	return std::to_string(toId);
+}
+bool Question::getAnon(){
+	return anon;
+}
+std::string Question::getAnonString(){
+	return std::to_string(anon);
+}
+bool Question::getAnswered(){
+	return answered;
+}
+std::string Question::getAnsweredString(){
+	return std::to_string(answered);
+}
+std::string Question::getText(){
+	return text;
+}
+std::string Question::getAns(){
+	return ans;
+}
+
+void Question::setId(const int id)
+{
+	this->id = id;
+}
+void Question::setId(std::string id)
+{
+	this->id = stoi(id);
+}
+void Question::setThreadId(const int threadId)
+{
+	this->threadId = threadId;
+}
+void Question::setThreadId(std::string threadId)
+{
+	this->threadId = stoi(threadId);
+}
+void Question::setFromId(const int fromId)
+{
+	this->fromId = fromId;
+}
+void Question::setFromId(std::string fromId)
+{
+	this->fromId = stoi(fromId);
+}
+void Question::setToId(const int toId)
+{
+	this->toId = toId;
+}
+void Question::setToId(std::string toId)
+{
+	this->toId = stoi(toId);
+}
+void Question::setAnon(const bool anon)
+{
+	this->anon = anon;
+}
+void Question::setAnon(std::string anon)
+{
+	this->anon = stoi(anon);
+}
+void Question::setAnswered(const bool answered)
+{
+	this->answered = answered;
+}
+void Question::setAnswered(std::string answered)
+{
+	this->answered = stoi(answered);
+}
+void Question::setText(std::string text)
+{
+	this->text = text;
+}
+void Question::setAns(std::string ans)
+{
+	this->ans = ans;
+}

@@ -19,22 +19,22 @@ User::~User() {
 	// TODO Auto-generated destructor stub
 }
 
-int User::getId(){
+int User::getId() const{
 	return id;
 }
-std::string User::getIdString(){
+std::string User::getIdString() const{
 	return std::to_string(id);
 }
-std::string User::getUsername(){
+std::string User::getUsername() const{
 	return username;
 }
-std::string User::getPassword(){
+std::string User::getPassword() const{
 	return password;
 }
-bool User::getAllowAnonQs(){
+bool User::getAllowAnonQs() const{
 	return allowAnonQs;
 }
-std::string User::getAllowAnonQsString(){
+std::string User::getAllowAnonQsString() const{
 	return std::to_string(allowAnonQs);
 }
 void User::setId(const int id){

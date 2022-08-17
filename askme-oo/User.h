@@ -19,12 +19,12 @@ public:
 	User();
 	virtual ~User();
 
-	int getId();
-	std::string getIdString();
-	std::string getUsername();
-	std::string getPassword();
-	bool getAllowAnonQs();
-	std::string getAllowAnonQsString();
+	int getId() const;
+	std::string getIdString() const;
+	std::string getUsername() const;
+	std::string getPassword() const;
+	bool getAllowAnonQs() const;
+	std::string getAllowAnonQsString() const;
 	void setId(const int id);
 	void setId(std::string id);
 	void setUsername(const std::string username);

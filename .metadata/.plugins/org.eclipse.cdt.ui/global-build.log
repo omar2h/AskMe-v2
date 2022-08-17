@@ -1492,3 +1492,362 @@ Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
 g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
 Info: Nothing to build for askme-oo
+15:04:19 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menu.o "..\\Menu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+15:05:33 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+15:06:23 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file askme-oo.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:06:32 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+15:07:07 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:07:29 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Inputscanner.o "..\\Inputscanner.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\Signuphandler.cpp:10:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+In file included from ..\DBmanager.h:12:
+..\Question.h:52:14: error: extra qualification 'Question::' on member 'print_child' [-fpermissive]
+   52 |         void Question::print_child(int space) const;
+      |              ^~~~~~~~
+18:07:42 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+..\QuestionsDb.cpp: In member function 'void QuestionsDb::get_Q_toUser(const std::vector<std::__cxx11::basic_string<char> >&, std::map<int, std::vector<Question> >&, int)':
+..\QuestionsDb.cpp:35:23: error: 'int Question::threadId' is private within this context
+   35 |                 if (q.threadId == -1)
+      |                       ^~~~~~~~
+In file included from ..\QuestionsDb.cpp:9:
+..\Question.h:14:19: note: declared private here
+   14 |         int id{}, threadId{}, fromId{}, toId{};
+      |                   ^~~~~~~~
+..\QuestionsDb.cpp:36:30: error: 'int Question::id' is private within this context
+   36 |                         mp[q.id].push_back(q);
+      |                              ^~
+..\Question.h:14:13: note: declared private here
+   14 |         int id{}, threadId{}, fromId{}, toId{};
+      |             ^~
+..\QuestionsDb.cpp:39:30: error: 'int Question::id' is private within this context
+   39 |                         mp[q.id].push_back(q);
+      |                              ^~
+..\Question.h:14:13: note: declared private here
+   14 |         int id{}, threadId{}, fromId{}, toId{};
+      |             ^~
+..\QuestionsDb.cpp:40:30: error: 'int Question::threadId' is private within this context
+   40 |                         mp[q.threadId].push_back(q);
+      |                              ^~~~~~~~
+..\Question.h:14:19: note: declared private here
+   14 |         int id{}, threadId{}, fromId{}, toId{};
+      |                   ^~~~~~~~
+18:09:24 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\AppMainMenu.cpp:9:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::run(int, User&)':
+..\AppMainMenu.cpp:26:42: error: invalid use of incomplete type 'class User'
+   26 |                 print_questions_received(user.getId());
+      |                                          ^~~~
+In file included from ..\AppMainMenu.cpp:8:
+..\AppMainMenu.h:11:7: note: forward declaration of 'class User'
+   11 | class User;
+      |       ^~~~
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::print_questions_received(int)':
+..\AppMainMenu.cpp:40:28: error: 'int Question::threadId' is private within this context
+   40 |                 if (val[0].threadId == -1)
+      |                            ^~~~~~~~
+In file included from ..\DBmanager.h:12:
+..\Question.h:14:19: note: declared private here
+   14 |         int id{}, threadId{}, fromId{}, toId{};
+      |                   ^~~~~~~~
+..\AppMainMenu.cpp:47:58: error: 'int Question::id' is private within this context
+   47 |                                 print_children(mp[val[i].id], mp, spaces + 2);
+      |                                                          ^~
+..\Question.h:14:13: note: declared private here
+   14 |         int id{}, threadId{}, fromId{}, toId{};
+      |             ^~
+..\AppMainMenu.cpp:47:33: error: 'print_children' was not declared in this scope
+   47 |                                 print_children(mp[val[i].id], mp, spaces + 2);
+      |                                 ^~~~~~~~~~~~~~
+18:11:08 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menu_printer.o "..\\Menu_printer.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\Loginhandler.cpp:10:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\Signuphandler.cpp:10:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\AppMainMenu.cpp:9:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::print_questions_received(int)':
+..\AppMainMenu.cpp:48:33: error: 'print_children' was not declared in this scope
+   48 |                                 print_children(mp[val[i].getId()], mp, spaces + 2);
+      |                                 ^~~~~~~~~~~~~~
+18:12:46 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o User.o "..\\User.cpp" 
+..\User.cpp:22:5: error: no declaration matches 'int User::getId()'
+   22 | int User::getId(){
+      |     ^~~~
+In file included from ..\User.cpp:8:
+..\User.h:22:13: note: candidate is: 'int User::getId() const'
+   22 |         int getId() const;
+      |             ^~~~~
+..\User.h:12:7: note: 'class User' defined here
+   12 | class User {
+      |       ^~~~
+..\User.cpp:28:13: error: no declaration matches 'std::string User::getUsername()'
+   28 | std::string User::getUsername(){
+      |             ^~~~
+..\User.h:24:21: note: candidate is: 'std::string User::getUsername() const'
+   24 |         std::string getUsername() const;
+      |                     ^~~~~~~~~~~
+..\User.h:12:7: note: 'class User' defined here
+   12 | class User {
+      |       ^~~~
+..\User.cpp:31:13: error: no declaration matches 'std::string User::getPassword()'
+   31 | std::string User::getPassword(){
+      |             ^~~~
+..\User.h:25:21: note: candidate is: 'std::string User::getPassword() const'
+   25 |         std::string getPassword() const;
+      |                     ^~~~~~~~~~~
+..\User.h:12:7: note: 'class User' defined here
+   12 | class User {
+      |       ^~~~
+..\User.cpp:34:6: error: no declaration matches 'bool User::getAllowAnonQs()'
+   34 | bool User::getAllowAnonQs(){
+      |      ^~~~
+..\User.h:26:14: note: candidate is: 'bool User::getAllowAnonQs() const'
+   26 |         bool getAllowAnonQs() const;
+      |              ^~~~~~~~~~~~~~
+..\User.h:12:7: note: 'class User' defined here
+   12 | class User {
+      |       ^~~~
+18:13:26 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\DBmanager.cpp:8:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Question.o "..\\Question.cpp" 
+..\Question.cpp: In function 'void print_children(std::vector<Question>, std::map<int, std::vector<Question> >&, int)':
+..\Question.cpp:152:30: error: 'int Question::id' is private within this context
+  152 |                 if (mp[qv[i].id].size() > 1)
+      |                              ^~
+In file included from ..\Question.cpp:8:
+..\Question.h:17:13: note: declared private here
+   17 |         int id{}, threadId{}, fromId{}, toId{};
+      |             ^~
+..\Question.cpp:152:30: note: field 'int Question::id' can be accessed via 'int Question::getId() const'
+  152 |                 if (mp[qv[i].id].size() > 1)
+      |                              ^~
+      |                              getId()
+..\Question.cpp:153:49: error: 'int Question::id' is private within this context
+  153 |                         print_children(mp[qv[i].id], mp, spaces - 2);
+      |                                                 ^~
+..\Question.h:17:13: note: declared private here
+   17 |         int id{}, threadId{}, fromId{}, toId{};
+      |             ^~
+..\Question.cpp:153:49: note: field 'int Question::id' can be accessed via 'int Question::getId() const'
+  153 |                         print_children(mp[qv[i].id], mp, spaces - 2);
+      |                                                 ^~
+      |                                                 getId()
+18:14:01 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Question.o "..\\Question.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o User.o "..\\User.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\AppMainMenu.cpp:9:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\Signuphandler.cpp:10:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\Loginhandler.cpp:10:
+..\QuestionsDb.h:17: warning: "USERSTXT_PATH" redefined
+   17 | #define USERSTXT_PATH "questions.txt"
+      | 
+In file included from ..\DBmanager.h:10:
+..\UsersDb.h:14: note: this is the location of the previous definition
+   14 | #define USERSTXT_PATH "users.txt"
+      | 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+18:17:52 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:35:53 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:38:00 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:39:22 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:40:11 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:40:37 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:41:44 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:42:54 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+18:58:16 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Question.o "..\\Question.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+18:58:47 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Question.o "..\\Question.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+18:59:30 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Question.o "..\\Question.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+19:00:23 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o User.o "..\\User.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+19:11:42 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 

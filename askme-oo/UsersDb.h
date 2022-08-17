@@ -11,6 +11,7 @@
 #include <vector>
 class User;
 
+#ifndef USERSTXT_PATH
 #define USERSTXT_PATH "users.txt"
 #define DELIMITER ","
 #define ID 0
@@ -18,6 +19,7 @@ class User;
 #define PASSWORD 2
 #define ALLOW_ANON_Q 3
 #define USER_ITEMS 4
+#endif
 
 class UsersDb {
 	std::string path;
@@ -60,6 +62,7 @@ public:
 	std::string get_path();
 	std::string get_delimiter();
 	bool check_user_login(std::vector<std::string>& v, User& user, const std::string username, const std::string password);
+	std::string get_user_string(User&);
 };
 
 #endif /* USERSDB_H_ */

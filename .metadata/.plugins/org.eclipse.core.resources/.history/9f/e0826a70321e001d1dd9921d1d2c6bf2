@@ -1,0 +1,20 @@
+/*
+ * AppMainMenu.h
+ *
+ *  Created on: Aug 17, 2022
+ *      Author: omarh
+ */
+
+#ifndef APPMAINMENU_H_
+#define APPMAINMENU_H_
+
+class User;
+class AppMainMenu {
+public:
+	AppMainMenu();
+	virtual ~AppMainMenu();
+
+	void run(int choice, User&);
+};
+
+#endif /* APPMAINMENU_H_ */

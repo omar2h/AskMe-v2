@@ -9,8 +9,13 @@
 #define AUTHENTICATOR_H_
 #include "Loginhandler.h"
 #include "Signuphandler.h"
-#include "User.h"
-//class Signup_handler;
+
+
+class User;
+
+#define LOGIN 1
+#define SIGNUP 2
+#define EXIT 3
 
 class Authenticator {
 	Login_handler login_handler;

@@ -30,7 +30,7 @@ void Login_handler::login(User &user)
     	user = DB.get_user_login(username, password);
     }
     catch(const int error){
-    	throw error;
+    	throw;
     }
 
 }

@@ -1,0 +1,28 @@
+/*
+ * QuestionsDb.h
+ *
+ *  Created on: Aug 17, 2022
+ *      Author: omarh
+ */
+
+#ifndef QUESTIONSDB_H_
+#define QUESTIONSDB_H_
+
+#include <iostream>
+
+#define USERSTXT_PATH "questions.txt"
+#define DELIMITER ","
+
+class QuestionsDb {
+	std::string path;
+	std::string del;
+public:
+	QuestionsDb();
+	virtual ~QuestionsDb();
+
+	std::string get_path();
+	std::string get_delimiter();
+	void get_Q_toUser();
+};
+
+#endif /* QUESTIONSDB_H_ */

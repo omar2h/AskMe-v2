@@ -7,10 +7,11 @@
 
 #include "App.h"
 #include "User.h"
-#include "Menu.h"
 #include "Error.h"
 #include "Inputscanner.h"
 #include "Authenticator.h"
+#include "AppMainMenu.h"
+#include "Menu_printer.h"
 
 App::App() {
 	// TODO Auto-generated constructor stub
@@ -41,13 +42,12 @@ App::~App() {
 void App::run()
 {
 	User user;
-	Menu menu;
-//	Login_handler login_handler;
-//	Signup_handler signup_handler;
+	Menuprinter menu;
 	Authenticator auth;
-//	std::pair<User, bool> userLoginPair;
 	Error error;
 	Input_scanner input_scanner;
+	AppMainMenu appMain;
+
 
 	int choice;
 
@@ -60,9 +60,23 @@ void App::run()
 			choice = input_scanner.get_choice(1, 3);
 			if(!choice)
 				continue;
-
-			auth.access(choice, user);
-
+			try
+			{
+				auth.access(choice, user);
+				break;
+			}
+			catch(const int err)
+			{
+				error.print(err);
+			}
+		}
+		while(1)
+		{
+			menu.menu_main();
+			choice = input_scanner.get_choice(1, 8);
+			if(!choice)
+				continue;
+			appMain.run(choice, user);
 		}
 	}
 }
