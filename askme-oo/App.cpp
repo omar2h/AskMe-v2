@@ -13,27 +13,26 @@
 #include "AppMainMenu.h"
 #include "Menu_printer.h"
 
-App::App() {
+App::App()
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-App::~App() {
+App::~App()
+{
 	// TODO Auto-generated destructor stub
 }
 
 /* ****** helper functions ******** */
 
-
-
-//std::string App::get_qText_from_user()
+// std::string App::get_qText_from_user()
 //{
 //	std::string qText;
 //	std::cin.ignore();
 //	std::cout << "Enter Your Question: ";
 //	std::getline(std::cin, qText);
 //	return qText;
-//}
+// }
 
 /* *********************************************** */
 
@@ -48,7 +47,6 @@ void App::run()
 	Input_scanner input_scanner;
 	AppMainMenu appMain;
 
-
 	int choice;
 
 	while (1)
@@ -58,30 +56,36 @@ void App::run()
 			/* prints login menu */
 			menu.menu_login();
 			choice = input_scanner.get_choice(1, 3);
-			if(!choice)
+			if (!choice)
 				continue;
 			try
 			{
 				auth.access(choice, user);
 				break;
 			}
-			catch(const int err)
+			catch (const int err)
 			{
 				error.print(err);
 			}
 		}
-		while(1)
+		while (1)
 		{
 			menu.menu_main();
 			choice = input_scanner.get_choice(1, 8);
-			if(!choice)
+			if (!choice)
 				continue;
-			appMain.run(choice, user);
+			try{
+				appMain.run(choice, user);
+			}
+			catch (const int err)
+			{
+				error.print(err);
+			}
 		}
 	}
 }
 
-//void App::main_menu(User &user)
+// void App::main_menu(User &user)
 //{
 //	Menu menu;
 //	Error error;
@@ -138,9 +142,9 @@ void App::run()
 //			break;
 //		}
 //	}
-//}
+// }
 
-//void App::print_questions_received(const int uId)
+// void App::print_questions_received(const int uId)
 //{
 //	DbManager DB;
 //	/* map variable to store questions where the id is the key and vector of questions beginning with the questions followed by its children if any */
@@ -165,9 +169,9 @@ void App::run()
 //			std::cout << '\n';
 //		}
 //	}
-//}
+// }
 
-//void App::print_questions_asked(const int uId)
+// void App::print_questions_asked(const int uId)
 //{
 //	DbManager DB;
 //	/* vector variable to store questions user asked */
@@ -181,13 +185,13 @@ void App::run()
 //		/* print question in an asked format */
 //		q.print_asked();
 //	}
-//}
+// }
 
 /* 1- user enter if of the other user to ask (toUser) */
 /* 2- check toUser exist in database */
 /* 3- check if toUser allow anon questions. if allow ask user to choose question to be anon or not */
 /* 4- enter question id if new enter -1 or id of existing q */
-//void App::ask(User &user)
+// void App::ask(User &user)
 //{
 //	/* variable to store new question asked by user */
 //	Question q;
@@ -274,11 +278,11 @@ void App::run()
 //
 //	DB.questionsDb.add_question(q);
 //	std::cout << "\n\n--------- Question Saved ----------\n\n";
-//}
+// }
 
 /* 1- user enter question to answer */
 /* 2- enter answer */
-//void App::answer(const int uId)
+// void App::answer(const int uId)
 //{
 //	DbManager DB;
 //	Error error;
@@ -315,10 +319,10 @@ void App::run()
 //
 //	DB.questionsDb.update_answer(q);
 //	std::cout << "\n\n---- Answer Saved ----\n\n";
-//}
+// }
 
 /* 1- enter question id */
-//void App::delete_question(const int uId)
+// void App::delete_question(const int uId)
 //{
 //	DbManager DB;
 //	Error error;
@@ -343,15 +347,15 @@ void App::run()
 //	}
 //	DB.questionsDb.delete_q(qId);
 //	std::cout << "\n\n ----- Question Deleted -----\n\n";
-//}
+// }
 
-//void App::list_users()
+// void App::list_users()
 //{
 //	DbManager DB;
 //	DB.usersDb.print();
-//}
+// }
 
-//void App::print_feed()
+// void App::print_feed()
 //{
 //	/* vector to store answered questions */
 //	std::vector<Question> qv;
@@ -359,5 +363,4 @@ void App::run()
 //	qv = DB.questionsDb.feed();
 //	for (Question &q : qv)
 //		q.print_feed();
-//}
-
+// }

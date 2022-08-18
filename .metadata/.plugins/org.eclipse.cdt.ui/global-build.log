@@ -1851,3 +1851,229 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp"
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
 g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+21:33:15 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Error.o "..\\Error.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o User.o "..\\User.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Authenticator.o "..\\Authenticator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+..\QuestionsDb.cpp: In function 'void get_writeLine(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const Question&, int)':
+..\QuestionsDb.cpp:81:30: error: 'get_question_string' was not declared in this scope
+   81 |                 writeLine += get_question_string(q);
+      |                              ^~~~~~~~~~~~~~~~~~~
+..\QuestionsDb.cpp:88:46: error: 'del' was not declared in this scope
+   88 |                                 writeLine += del;
+      |                                              ^~~
+21:36:56 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::update_answer(const Question&)':
+..\DBmanager.cpp:140:17: error: 'get_writeLine' was not declared in this scope; did you mean 'writeLines'?
+  140 |                 get_writeLine(writeLines, v, q, id);
+      |                 ^~~~~~~~~~~~~
+      |                 writeLines
+..\DBmanager.cpp:143:16: error: cannot convert 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} to 'const char*'
+  143 |         remove(path);
+      |                ^~~~
+      |                |
+      |                const std::string {aka const std::__cxx11::basic_string<char>}
+In file included from C:/msys64/mingw64/include/locale.h:12,
+                 from C:/msys64/mingw64/include/c++/12.1.0/clocale:42,
+                 from C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++locale.h:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/localefwd.h:40,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ostream:38,
+                 from C:/msys64/mingw64/include/c++/12.1.0/iostream:39,
+                 from ..\UsersDb.h:10,
+                 from ..\DBmanager.h:10,
+                 from ..\DBmanager.cpp:8:
+C:/msys64/mingw64/include/stdio.h:707:34: note:   initializing argument 1 of 'int remove(const char*)'
+  707 |   int __cdecl remove(const char *_Filename);
+      |                      ~~~~~~~~~~~~^~~~~~~~~
+..\DBmanager.cpp:144:16: error: 'TEMPTXT_PATH' was not declared in this scope; did you mean 'USERSTXT_PATH'?
+  144 |         rename(TEMPTXT_PATH, path);
+      |                ^~~~~~~~~~~~
+      |                USERSTXT_PATH
+21:38:30 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::answer(int)':
+..\AppMainMenu.cpp:103:15: error: 'bool Question::answered' is private within this context
+  103 |         if (q.answered)
+      |               ^~~~~~~~
+In file included from ..\DBmanager.h:12,
+                 from ..\AppMainMenu.cpp:9:
+..\Question.h:19:22: note: declared private here
+   19 |         bool anon{}, answered{};
+      |                      ^~~~~~~~
+..\AppMainMenu.cpp:108:34: error: 'std::string Question::ans' is private within this context
+  108 |         std::getline(std::cin, q.ans);
+      |                                  ^~~
+..\Question.h:20:29: note: declared private here
+   20 |         std::string text{}, ans{};
+      |                             ^~~
+..\AppMainMenu.cpp:109:11: error: 'bool Question::answered' is private within this context
+  109 |         q.answered = 1;
+      |           ^~~~~~~~
+..\Question.h:19:22: note: declared private here
+   19 |         bool anon{}, answered{};
+      |                      ^~~~~~~~
+..\AppMainMenu.cpp:110:12: error: 'class DBmanager' has no member named 'questionsDb'; did you mean 'QuestionsDb DBmanager::questionsdb'? (not accessible from this context)
+  110 |         DB.questionsDb.update_answer(q);
+      |            ^~~~~~~~~~~
+..\DBmanager.h:23:21: note: declared private here
+   23 |         QuestionsDb questionsdb;
+      |                     ^~~~~~~~~~~
+21:40:39 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::answer(int)':
+..\AppMainMenu.cpp:108:21: error: no matching function for call to 'getline(std::istream&, std::string)'
+  108 |         std::getline(std::cin, q.getAns());
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/string:53,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/locale_classes.h:40,
+                 from C:/msys64/mingw64/include/c++/12.1.0/bits/ios_base.h:41,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ios:42,
+                 from C:/msys64/mingw64/include/c++/12.1.0/ostream:38,
+                 from C:/msys64/mingw64/include/c++/12.1.0/iostream:39,
+                 from ..\UsersDb.h:10,
+                 from ..\DBmanager.h:10,
+                 from ..\AppMainMenu.cpp:9:
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.h:3938:5: note: candidate: 'std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&) [with _CharT = char; _Traits = char_traits<char>; _Alloc = allocator<char>]' (near match)
+ 3938 |     getline(basic_istream<_CharT, _Traits>&& __is,
+      |     ^~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.h:3938:5: note:   conversion of argument 2 would be ill-formed:
+..\AppMainMenu.cpp:108:40: error: cannot bind non-const lvalue reference of type 'std::__cxx11::basic_string<char>&' to an rvalue of type 'std::string' {aka 'std::__cxx11::basic_string<char>'}
+  108 |         std::getline(std::cin, q.getAns());
+      |                                ~~~~~~~~^~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/string:54:
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.tcc:1012:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&, _CharT)'
+ 1012 |     getline(basic_istream<_CharT, _Traits>& __in,
+      |     ^~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.tcc:1012:5: note:   template argument deduction/substitution failed:
+..\AppMainMenu.cpp:108:21: note:   candidate expects 3 arguments, 2 provided
+  108 |         std::getline(std::cin, q.getAns());
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.h:3923:5: note: candidate: 'std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&) [with _CharT = char; _Traits = char_traits<char>; _Alloc = allocator<char>]' (near match)
+ 3923 |     getline(basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.h:3923:5: note:   conversion of argument 2 would be ill-formed:
+..\AppMainMenu.cpp:108:40: error: cannot bind non-const lvalue reference of type 'std::__cxx11::basic_string<char>&' to an rvalue of type 'std::string' {aka 'std::__cxx11::basic_string<char>'}
+  108 |         std::getline(std::cin, q.getAns());
+      |                                ~~~~~~~~^~
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.h:3931:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&, _CharT)'
+ 3931 |     getline(basic_istream<_CharT, _Traits>&& __is,
+      |     ^~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.h:3931:5: note:   template argument deduction/substitution failed:
+..\AppMainMenu.cpp:108:21: note:   candidate expects 3 arguments, 2 provided
+  108 |         std::getline(std::cin, q.getAns());
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+21:41:56 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::update_answer(const Question&)':
+..\DBmanager.cpp:130:15: error: duplicate 'const'
+  130 |         const const char* path = questionsdb.get_path();
+      |               ^~~~~
+      |               -----
+..\DBmanager.cpp:130:54: error: cannot convert 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'const char*' in initialization
+  130 |         const const char* path = questionsdb.get_path();
+      |                                  ~~~~~~~~~~~~~~~~~~~~^~
+      |                                                      |
+      |                                                      std::string {aka std::__cxx11::basic_string<char>}
+..\DBmanager.cpp:140:17: error: 'get_writeLine' was not declared in this scope; did you mean 'writeLines'?
+  140 |                 get_writeLine(writeLines, v, q, id);
+      |                 ^~~~~~~~~~~~~
+      |                 writeLines
+..\DBmanager.cpp:144:16: error: 'TEMPTXT_PATH' was not declared in this scope; did you mean 'USERSTXT_PATH'?
+  144 |         rename(TEMPTXT_PATH, path);
+      |                ^~~~~~~~~~~~
+      |                USERSTXT_PATH
+21:46:15 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::update_answer(const Question&)':
+..\DBmanager.cpp:140:17: error: 'get_writeLine' was not declared in this scope; did you mean 'writeLines'?
+  140 |                 get_writeLine(writeLines, v, q, id);
+      |                 ^~~~~~~~~~~~~
+      |                 writeLines
+..\DBmanager.cpp:144:16: error: 'TEMPTXT_PATH' was not declared in this scope; did you mean 'USERSTXT_PATH'?
+  144 |         rename(TEMPTXT_PATH, path);
+      |                ^~~~~~~~~~~~
+      |                USERSTXT_PATH
+21:50:29 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+..\QuestionsDb.cpp: In member function 'const char* QuestionsDb::get_pathChar()':
+..\QuestionsDb.cpp:30:16: error: cannot convert 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'const char*' in return
+   30 |         return path;
+      |                ^~~~
+      |                |
+      |                std::string {aka std::__cxx11::basic_string<char>}
+21:51:49 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::update_answer(const Question&)':
+..\DBmanager.cpp:141:17: error: 'get_writeLine' was not declared in this scope; did you mean 'writeLines'?
+  141 |                 get_writeLine(writeLines, v, q, id);
+      |                 ^~~~~~~~~~~~~
+      |                 writeLines
+21:54:04 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+Info: Nothing to build for askme-oo
+22:00:45 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file askme-oo.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:00:50 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+22:01:59 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file askme-oo.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:02:03 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+22:10:43 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Question.o "..\\Question.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+22:16:36 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+22:20:13 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo

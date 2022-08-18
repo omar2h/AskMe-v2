@@ -5,14 +5,13 @@
  *      Author: omarh
  */
 
-#include<iostream>
+#include <iostream>
 #include "App.h"
 
-int main(){
+int main()
+{
 	App app;
 
 	app.run();
 	return 0;
 }
-
-

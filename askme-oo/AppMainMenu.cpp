@@ -10,29 +10,34 @@
 #include "User.h"
 #include "Question.h"
 
-
-AppMainMenu::AppMainMenu() {
+AppMainMenu::AppMainMenu()
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-AppMainMenu::~AppMainMenu() {
+AppMainMenu::~AppMainMenu()
+{
 	// TODO Auto-generated destructor stub
 }
 
-void AppMainMenu::run(int choice, User& user){
-	if(choice == PRINT_QUESTIONS_RECEIVED){
+void AppMainMenu::run(int choice, User &user)
+{
+	if (choice == PRINT_QUESTIONS_RECEIVED)
+	{
 		print_questions_received(user.getId());
 	}
-	else if(choice == PRINT_QUESTIONS_ASKED){
+	else if (choice == PRINT_QUESTIONS_ASKED)
+	{
 		print_questions_asked(user.getId());
 	}
-	else if(choice == ANSWER){
+	else if (choice == ANSWER)
+	{
 		answer(user.getId());
 	}
 }
 
-void AppMainMenu::print_questions_received(const int uId){
+void AppMainMenu::print_questions_received(const int uId)
+{
 	DBmanager DB;
 	/* map variable to store questions where the id is the key and vector of questions beginning with the questions followed by its children if any */
 	std::map<int, std::vector<Question>> mp;
@@ -72,37 +77,38 @@ void AppMainMenu::print_questions_asked(const int uId)
 	}
 }
 
-void AppMainMenu::answer(const int uId){
-//	DBmanager DB;
-//	Question q;
-//	int qId;
-//	/* user enter question to answer */
-//	while (1)
-//	{
-//		std::cout << "Enter question id to answer or -1 to cancel: ";
-//		std::cin >> qId;
-//
-//		if (qId == -1)
-//			return;
-//		/* check whether user received this question or not. can only answer if it is received */
-//		if (!DB.check_user_has_q(qId, uId))
-//			/* error: Question ID doesn't seem to exist for this user */
-//			throw 4;
-//		else
-//			break;
-//	}
-//	q = DB.questionsDb.get_question(qId).first;
-//
-//	q.print();
-//	if (q.answered)
-//		std::cout << "\n--- Warning: Question already answered. Answer will be overwritten ---\n\n";
-//	std::cin.ignore();
-//
-//	/* enter answer */
-//	std::cout << "Enter answer: ";
-//	std::getline(std::cin, q.ans);
-//	q.answered = 1;
-//
-//	DB.questionsDb.update_answer(q);
-//	std::cout << "\n\n---- Answer Saved ----\n\n";
+void AppMainMenu::answer(const int uId)
+{
+	DBmanager DB;
+	Question q;
+	int qId;
+	/* user enter question to answer */
+	while (1)
+	{
+		std::cout << "Enter question id to answer or -1 to cancel: ";
+		std::cin >> qId;
+
+		if (qId == -1)
+			return;
+		/* check whether user received this question or not. can only answer if it is received */
+		try{
+			q = DB.get_q_toUser(qId, uId);
+			break;
+		}
+		catch(const int err){
+			throw;
+		}
+	}
+	q.print();
+	if (q.getAnswered())
+		std::cout << "\n--- Warning: Question already answered. Answer will be overwritten ---\n\n";
+	std::cin.ignore();
+	/* enter answer */
+	std::cout << "Enter answer: ";
+	std::string ans;
+	std::getline(std::cin, ans);
+	q.setAns(ans);
+	q.setAnswered(1);
+	DB.update_answer(q);
+	std::cout << "\n\n---- Answer Saved ----\n\n";
 }

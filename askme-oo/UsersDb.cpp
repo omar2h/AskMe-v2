@@ -8,23 +8,26 @@
 #include "UsersDb.h"
 #include "User.h"
 
-UsersDb::UsersDb() : path(USERSTXT_PATH), del(DELIMITER) {
+UsersDb::UsersDb() : path(USERSTXT_PATH), del(DELIMITER)
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-UsersDb::~UsersDb() {
+UsersDb::~UsersDb()
+{
 	// TODO Auto-generated destructor stub
 }
 
-std::string UsersDb::get_path(){
+std::string UsersDb::get_path()
+{
 	return path;
 }
 
-std::string UsersDb::get_delimiter(){
+std::string UsersDb::get_delimiter()
+{
 	return del;
 }
-//std::pair<User, bool> UsersDb::get_user(const int id)
+// std::pair<User, bool> UsersDb::get_user(const int id)
 //{
 //	User user;
 //	DbManager dbManager;
@@ -50,9 +53,9 @@ std::string UsersDb::get_delimiter(){
 //		}
 //	}
 //	return userPair;
-//}
+// }
 
-bool UsersDb::check_user_login(std::vector<std::string>& v, User& user, const std::string username, const std::string password)
+bool UsersDb::check_user_login(std::vector<std::string> &v, User &user, const std::string username, const std::string password)
 {
 	if (username == v[USERNAME] && password == v[PASSWORD])
 	{
@@ -64,11 +67,12 @@ bool UsersDb::check_user_login(std::vector<std::string>& v, User& user, const st
 	return false;
 }
 
-std::string UsersDb::get_user_string(User& user){
+std::string UsersDb::get_user_string(User &user)
+{
 	return user.getIdString() + del + user.getUsername() + del + user.getPassword() + del + user.getAllowAnonQsString();
 }
 
-//bool UsersDb::add_user(User &user)
+// bool UsersDb::add_user(User &user)
 //{
 //	DbManager dbManager;
 //	user.id = dbManager.generate_id(USERSTXT_PATH);
@@ -76,9 +80,9 @@ std::string UsersDb::get_user_string(User& user){
 //	std::string line = std::to_string(user.id) + DELIMITER + user.username + DELIMITER + user.password + DELIMITER + std::to_string(user.allowAnonQs) + '\n';
 //	lines.push_back(line);
 //	return dbManager.write_file_lines(USERSTXT_PATH, lines, true);
-//}
+// }
 //
-//void UsersDb::print()
+// void UsersDb::print()
 //{
 //	DbManager dbManager;
 //	const std::string path = "users.txt";
@@ -92,5 +96,4 @@ std::string UsersDb::get_user_string(User& user){
 //		std::cout << "ID: " << v[ID] << "\tUserName: " << v[USERNAME] << '\n';
 //	}
 //	std::cout << '\n';
-//}
-
+// }

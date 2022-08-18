@@ -7,55 +7,70 @@
 
 #include "Question.h"
 
-Question::Question() {
+Question::Question() : id(-1), threadId(-1), fromId(-1), toId(-1), anon(0), answered(0), text(""), ans("")
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-Question::~Question() {
+Question::~Question()
+{
 	// TODO Auto-generated destructor stub
 }
 
-int Question::getId() const{
+int Question::getId() const
+{
 	return id;
 }
-std::string Question::getIdString() const{
+std::string Question::getIdString() const
+{
 	return std::to_string(id);
 }
-int Question::getThreadId() const{
+int Question::getThreadId() const
+{
 	return threadId;
 }
-std::string Question::getThreadIdString() const{
+std::string Question::getThreadIdString() const
+{
 	return std::to_string(threadId);
 }
-int Question::getFromId() const{
+int Question::getFromId() const
+{
 	return fromId;
 }
-std::string Question::getFromIdString() const{
+std::string Question::getFromIdString() const
+{
 	return std::to_string(fromId);
 }
-int Question::getToId() const{
+int Question::getToId() const
+{
 	return toId;
 }
-std::string Question::getToIdString() const{
+std::string Question::getToIdString() const
+{
 	return std::to_string(toId);
 }
-bool Question::getAnon() const{
+bool Question::getAnon() const
+{
 	return anon;
 }
-std::string Question::getAnonString() const{
+std::string Question::getAnonString() const
+{
 	return std::to_string(anon);
 }
-bool Question::getAnswered() const{
+bool Question::getAnswered() const
+{
 	return answered;
 }
-std::string Question::getAnsweredString() const{
+std::string Question::getAnsweredString() const
+{
 	return std::to_string(answered);
 }
-std::string Question::getText() const{
+std::string Question::getText() const
+{
 	return text;
 }
-std::string Question::getAns() const{
+std::string Question::getAns() const
+{
 	return ans;
 }
 
@@ -116,7 +131,8 @@ void Question::setAns(std::string ans)
 	this->ans = ans;
 }
 
-void Question::print() const{
+void Question::print() const
+{
 	if (anon)
 		std::cout << "Question(id:" << id << "): " << text << '\n';
 	else

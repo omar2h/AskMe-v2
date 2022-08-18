@@ -28,19 +28,25 @@ class Question;
 #define ANSWERTEXT 7
 #endif
 
-class QuestionsDb {
+class QuestionsDb
+{
 	std::string path;
 	std::string del;
 
 	void update_question_info(const std::vector<std::string> &v, Question &q);
+
 public:
 	QuestionsDb();
 	virtual ~QuestionsDb();
 
 	std::string get_path();
+	const char* get_pathChar();
 	std::string get_delimiter();
-	void get_Q_toUser(const std::vector<std::string>&, std::map<int, std::vector<Question>>&, const int uId);
-	void get_Q_fromUser(const std::vector<std::string>& v, std::vector<Question>& qv, const int uId);
+	void get_Q_toUser(const std::vector<std::string> &, std::map<int, std::vector<Question>> &, const int uId);
+	void get_Q_fromUser(const std::vector<std::string> &v, std::vector<Question> &qv, const int uId);
+	bool get_Q(const std::vector<std::string> &v, Question &q, const int qId);
+	void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const Question& q, const int id);
+	std::string get_question_string(const Question& q);
 };
 
 #endif /* QUESTIONSDB_H_ */

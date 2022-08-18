@@ -8,66 +8,76 @@
 #include "DBmanager.h"
 #include "User.h"
 
-
 #include <fstream>
-DBmanager::DBmanager() {
+DBmanager::DBmanager()
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-DBmanager::~DBmanager() {
+DBmanager::~DBmanager()
+{
 	// TODO Auto-generated destructor stub
 }
 
-User DBmanager::get_user_login(std::string username, std::string password){
+User DBmanager::get_user_login(std::string username, std::string password)
+{
 	User user;
 	const std::string path = usersdb.get_path();
 	const std::string del = usersdb.get_delimiter();
 	std::vector<std::string> lines;
-	try{
-	read_file_lines(path, lines);
+	try
+	{
+		read_file_lines(path, lines);
 	}
-	catch(const int err){
+	catch (const int err)
+	{
 		throw;
 	}
 	for (auto &line : lines)
 	{
 		std::vector<std::string> v;
 		split_line_toVector(line, v, del);
-		if(usersdb.check_user_login(v, user, username, password))
+		if (usersdb.check_user_login(v, user, username, password))
 			return user;
 	}
 	throw 2;
 }
 
-void DBmanager::add_user(User& user){
+void DBmanager::add_user(User &user)
+{
 	const std::string path = usersdb.get_path();
-	try{
-	user.setId(generate_id(path));
+	try
+	{
+		user.setId(generate_id(path));
 	}
-	catch(const int err){
+	catch (const int err)
+	{
 		throw;
 	}
 	std::vector<std::string> lines;
 	std::string line = usersdb.get_user_string(user);
 	lines.push_back(line);
-	try{
-	write_file_lines(path, lines, true);
+	try
+	{
+		write_file_lines(path, lines, true);
 	}
-	catch(const int err){
+	catch (const int err)
+	{
 		throw;
 	}
 }
 
-void DBmanager::get_Qs_to_user(const int uId, std::map<int, std::vector<Question>>& mp)
+void DBmanager::get_Qs_to_user(const int uId, std::map<int, std::vector<Question>> &mp)
 {
 	const std::string path = questionsdb.get_path();
 	const std::string del = questionsdb.get_delimiter();
 	std::vector<std::string> lines;
-	try{
-	read_file_lines(path, lines);
+	try
+	{
+		read_file_lines(path, lines);
 	}
-	catch(const int err){
+	catch (const int err)
+	{
 		throw;
 	}
 	for (auto &line : lines)
@@ -78,14 +88,17 @@ void DBmanager::get_Qs_to_user(const int uId, std::map<int, std::vector<Question
 	}
 }
 
-void DBmanager::get_Qs_from_user(const int uId, std::vector<Question>& qv){
+void DBmanager::get_Qs_from_user(const int uId, std::vector<Question> &qv)
+{
 	const std::string path = questionsdb.get_path();
 	const std::string del = questionsdb.get_delimiter();
 	std::vector<std::string> lines;
-	try{
-	read_file_lines(path, lines);
+	try
+	{
+		read_file_lines(path, lines);
 	}
-	catch(const int err){
+	catch (const int err)
+	{
 		throw;
 	}
 	for (auto &line : lines)
@@ -95,6 +108,69 @@ void DBmanager::get_Qs_from_user(const int uId, std::vector<Question>& qv){
 		questionsdb.get_Q_fromUser(v, qv, uId);
 	}
 }
+
+Question DBmanager::get_q_toUser(const int qId, const int uId)
+{
+	Question q;
+	/* pair to store question and bool whether exist or not */
+	try
+	{
+		q = get_question(qId);
+	}
+	catch(const int err)
+	{
+		throw;
+	}
+	/* check if q toId is the same as user id signifying user received question*/
+	if (q.getToId() != uId)
+		throw 4;
+	return q;
+}
+void DBmanager::update_answer(const Question& q){
+	const char* path = questionsdb.get_pathChar();
+	const char* tempPath = TEMPTXT_PATH;
+	const std::string del = questionsdb.get_delimiter();
+	const int id = q.getId();
+	std::vector<std::string> readLines, writeLines;
+	read_file_lines(path, readLines);
+
+	for (auto const &line : readLines)
+	{
+		std::vector<std::string> v;
+		split_line_toVector(line, v, del);
+		questionsdb.get_writeLines(writeLines, v, q, id);
+	}
+	write_file_lines(tempPath, writeLines, false);
+	remove(path);
+	rename(tempPath, path);
+}
+
+Question DBmanager::get_question(const int id)
+{
+	const std::string path = questionsdb.get_path();
+	const std::string del = questionsdb.get_delimiter();
+	Question q;
+	std::vector<std::string> lines;
+
+	try
+	{
+		read_file_lines(path, lines);
+	}
+	catch (const int err)
+	{
+		throw;
+	}
+
+	for (auto &line : lines)
+	{
+		std::vector<std::string> v;
+		split_line_toVector(line, v, del);
+		if(questionsdb.get_Q(v, q, id))
+			return q;
+	}
+	throw 6;
+}
+
 void DBmanager::read_file_lines(std::string path, std::vector<std::string> &lines)
 {
 	std::fstream file_handler(path.c_str());
@@ -156,10 +232,12 @@ void DBmanager::split_line_toVector(std::string line, std::vector<std::string> &
 int DBmanager::generate_id(const std::string path)
 {
 	std::vector<std::string> lines;
-	try{
-	read_file_lines(path, lines);
+	try
+	{
+		read_file_lines(path, lines);
 	}
-	catch(const int err){
+	catch (const int err)
+	{
 		throw;
 	}
 

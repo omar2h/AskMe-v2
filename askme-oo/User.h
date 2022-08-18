@@ -9,8 +9,9 @@
 #define USER_H_
 #include <iostream>
 
-class User {
-/* id, username, password, allow anon questions bool */
+class User
+{
+	/* id, username, password, allow anon questions bool */
 	int id{};
 	std::string username{}, password{};
 	bool allowAnonQs{};

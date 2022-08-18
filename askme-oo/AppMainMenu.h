@@ -19,15 +19,17 @@ class User;
 #define FEED 7
 #define LOGOUT 8
 
-class AppMainMenu {
+class AppMainMenu
+{
 	void print_questions_received(const int uId);
 	void print_questions_asked(const int uId);
 	void answer(const int uId);
+
 public:
 	AppMainMenu();
 	virtual ~AppMainMenu();
 
-	void run(int choice, User&);
+	void run(int choice, User &);
 };
 
 #endif /* APPMAINMENU_H_ */

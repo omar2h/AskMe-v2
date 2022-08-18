@@ -12,11 +12,13 @@
 #include <vector>
 #include <map>
 
-class Question {
+class Question
+{
 	/* id, threadId, fromId, toId, anonymous question?, answered?, question text, answer text */
 	int id{}, threadId{}, fromId{}, toId{};
 	bool anon{}, answered{};
 	std::string text{}, ans{};
+
 public:
 	Question();
 	virtual ~Question();

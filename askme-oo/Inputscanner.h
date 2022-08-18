@@ -8,8 +8,10 @@
 #ifndef INPUTSCANNER_H_
 #define INPUTSCANNER_H_
 
-class Input_scanner {
+class Input_scanner
+{
 	bool verify_choice(const int choice, const int low, const int high);
+
 public:
 	Input_scanner();
 	virtual ~Input_scanner();

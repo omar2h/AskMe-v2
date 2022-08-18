@@ -7,12 +7,13 @@
 
 #include "Menu_printer.h"
 
-Menuprinter::Menuprinter() {
+Menuprinter::Menuprinter()
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-Menuprinter::~Menuprinter() {
+Menuprinter::~Menuprinter()
+{
 	// TODO Auto-generated destructor stub
 }
 
@@ -42,10 +43,10 @@ void Menuprinter::menu_main()
 void Menuprinter::print(const std::vector<std::string> menuStrings) const
 {
 	int sz = (int)menuStrings.size();
-	std::cout<<"Menu:\n";
-    for(int i=0; i<sz; i++){
-    	std::cout<<"\t"<<i+1<<": "<<menuStrings[i]<<"\n";
-    }
-    std::cout<<"\nPlease enter a number (1 - "<<sz<<"): ";
+	std::cout << "Menu:\n";
+	for (int i = 0; i < sz; i++)
+	{
+		std::cout << "\t" << i + 1 << ": " << menuStrings[i] << "\n";
+	}
+	std::cout << "\nPlease enter a number (1 - " << sz << "): ";
 }
-

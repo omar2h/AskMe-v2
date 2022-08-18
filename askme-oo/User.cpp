@@ -7,51 +7,65 @@
 
 #include "User.h"
 
-User::User() {
+User::User()
+{
 	// TODO Auto-generated constructor stub
-	id= -1;
-	username= "";
-	password="";
+	id = -1;
+	username = "";
+	password = "";
 	allowAnonQs = 0;
 }
 
-User::~User() {
+User::~User()
+{
 	// TODO Auto-generated destructor stub
 }
 
-int User::getId() const{
+int User::getId() const
+{
 	return id;
 }
-std::string User::getIdString() const{
+std::string User::getIdString() const
+{
 	return std::to_string(id);
 }
-std::string User::getUsername() const{
+std::string User::getUsername() const
+{
 	return username;
 }
-std::string User::getPassword() const{
+std::string User::getPassword() const
+{
 	return password;
 }
-bool User::getAllowAnonQs() const{
+bool User::getAllowAnonQs() const
+{
 	return allowAnonQs;
 }
-std::string User::getAllowAnonQsString() const{
+std::string User::getAllowAnonQsString() const
+{
 	return std::to_string(allowAnonQs);
 }
-void User::setId(const int id){
+void User::setId(const int id)
+{
 	this->id = id;
 }
-void User::setId(std::string id){
+void User::setId(std::string id)
+{
 	this->id = stoi(id);
 }
-void User::setUsername(const std::string username){
-	this->username= username;
+void User::setUsername(const std::string username)
+{
+	this->username = username;
 }
-void User::setPassword(const std::string password){
-	this->password= password;
+void User::setPassword(const std::string password)
+{
+	this->password = password;
 }
-void User::setAllowAnonQs(const bool allowAnonQs){
+void User::setAllowAnonQs(const bool allowAnonQs)
+{
 	this->allowAnonQs = allowAnonQs;
 }
-void User::setAllowAnonQs(std::string allowAnonQs){
+void User::setAllowAnonQs(std::string allowAnonQs)
+{
 	this->allowAnonQs = stoi(allowAnonQs);
 }

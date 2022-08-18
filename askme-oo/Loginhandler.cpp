@@ -9,13 +9,14 @@
 #include "User.h"
 #include "DBmanager.h"
 
-Login_handler::Login_handler() {
-	// TODO Auto-generated constructor stub
-
+Login_handler::Login_handler()
+{
+    // TODO Auto-generated constructor stub
 }
 
-Login_handler::~Login_handler() {
-	// TODO Auto-generated destructor stub
+Login_handler::~Login_handler()
+{
+    // TODO Auto-generated destructor stub
 }
 
 void Login_handler::login(User &user)
@@ -26,11 +27,12 @@ void Login_handler::login(User &user)
 
     std::cout << "Please enter UserName and Password: ";
     std::cin >> username >> password;
-    try{
-    	user = DB.get_user_login(username, password);
+    try
+    {
+        user = DB.get_user_login(username, password);
     }
-    catch(const int error){
-    	throw;
+    catch (const int error)
+    {
+        throw;
     }
-
 }

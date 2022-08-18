@@ -1,9 +1,1 @@
-19:11:42 **** Incremental Build of configuration Debug for project askme-oo ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
-g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
-
-19:11:45 Build Finished. 0 errors, 0 warnings. (took 2s.438ms)
-
+Info: Nothing to build for askme-oo

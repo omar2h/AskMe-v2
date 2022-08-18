@@ -23,4 +23,7 @@
 		<item key="stubImpl5" value="DEFINITION"/>
 		<item key="stubSelected5" value="false"/>
 	</section>
+	<section name="CResourceRenameRefactoringInputPage">
+		<item key="updateReferences" value="true"/>
+	</section>
 </section>

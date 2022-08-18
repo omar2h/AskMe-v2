@@ -9,17 +9,18 @@
 #define LOGINHANDLER_H_
 
 class User;
-class Login_handler {
+class Login_handler
+{
 public:
 	Login_handler();
 	virtual ~Login_handler();
 	/**
-	     * logs in user
-	     *
-	     * @param non
-	     * @return bool indicating successful login or not
-	     */
-	    void login(User &);
+	 * logs in user
+	 *
+	 * @param non
+	 * @return bool indicating successful login or not
+	 */
+	void login(User &);
 };
 
 #endif /* LOGINHANDLER_H_ */

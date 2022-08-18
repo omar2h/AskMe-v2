@@ -10,16 +10,18 @@
 #include "User.h"
 #include <iostream>
 
-Authenticator::Authenticator() {
+Authenticator::Authenticator()
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-Authenticator::~Authenticator() {
+Authenticator::~Authenticator()
+{
 	// TODO Auto-generated destructor stub
 }
 
-void Authenticator::access(const int choice, User& user){
+void Authenticator::access(const int choice, User &user)
+{
 	if (choice == LOGIN)
 	{
 		try
@@ -29,7 +31,8 @@ void Authenticator::access(const int choice, User& user){
 			return;
 		}
 
-		catch(const int err){
+		catch (const int err)
+		{
 			throw;
 		}
 	}
@@ -42,11 +45,11 @@ void Authenticator::access(const int choice, User& user){
 			std::cout << "\n-------------- Signed Up Successfully -------------\n\n";
 			return;
 		}
-		catch(const int err){
+		catch (const int err)
+		{
 			throw;
 		}
 	}
 	else if (choice == EXIT)
 		exit(0);
-
 }

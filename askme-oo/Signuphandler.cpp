@@ -9,12 +9,13 @@
 #include "User.h"
 #include "DBmanager.h"
 
-Signup_handler::Signup_handler() {
+Signup_handler::Signup_handler()
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-Signup_handler::~Signup_handler() {
+Signup_handler::~Signup_handler()
+{
 	// TODO Auto-generated destructor stub
 }
 
@@ -39,10 +40,12 @@ void Signup_handler::signup()
 
 	ans == 'y' ? user.setAllowAnonQs(1) : user.setAllowAnonQs(0);
 
-	try{
+	try
+	{
 		DB.add_user(user);
 	}
-	catch(const int err){
+	catch (const int err)
+	{
 		throw;
 	}
 }

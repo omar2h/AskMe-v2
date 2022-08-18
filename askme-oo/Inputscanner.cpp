@@ -7,19 +7,21 @@
 
 #include "Inputscanner.h"
 #include <iostream>
-Input_scanner::Input_scanner() {
+Input_scanner::Input_scanner()
+{
 	// TODO Auto-generated constructor stub
-
 }
 
-Input_scanner::~Input_scanner() {
+Input_scanner::~Input_scanner()
+{
 	// TODO Auto-generated destructor stub
 }
 
-int Input_scanner::get_choice(const int low, const int high){
+int Input_scanner::get_choice(const int low, const int high)
+{
 	int choice{};
-	std::cin>>choice;
-	if(verify_choice(choice, low, high))
+	std::cin >> choice;
+	if (verify_choice(choice, low, high))
 		return choice;
 	return 0;
 }
