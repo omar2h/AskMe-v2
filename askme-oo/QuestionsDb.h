@@ -30,6 +30,7 @@ class Question;
 
 #ifndef ANSWER
 #define ANSWER 1
+#define DELETE 0
 #endif
 
 class QuestionsDb
@@ -49,7 +50,7 @@ public:
 	void get_Q_toUser(const std::vector<std::string> &, std::map<int, std::vector<Question>> &, const int uId);
 	void get_Q_fromUser(const std::vector<std::string> &v, std::vector<Question> &qv, const int uId);
 	bool get_Q(const std::vector<std::string> &v, Question &q, const int qId);
-	void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const std::string& ans, const int qId, const int op);
+	void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, const std::string& ans="");
 	std::string get_question_string(const Question& q);
 };
 

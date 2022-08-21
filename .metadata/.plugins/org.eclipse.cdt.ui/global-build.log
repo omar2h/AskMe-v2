@@ -2134,3 +2134,187 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp"
 g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
 Info: Nothing to build for askme-oo
 Info: Nothing to build for askme-oo
+17:20:26 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::del_q_from_file(int)':
+..\DBmanager.cpp:217:43: error: no matching function for call to 'QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const int&, int)'
+  217 |                 questionsdb.get_writeLines(writeLines, v, qId, DELETE);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\DBmanager.h:11,
+                 from ..\DBmanager.cpp:8:
+..\QuestionsDb.h:53:14: note: candidate: 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const std::string&, int, int)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const std::string& ans, const int qId, const int op);
+      |              ^~~~~~~~~~~~~~
+..\QuestionsDb.h:53:14: note:   candidate expects 5 arguments, 4 provided
+17:21:29 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+In file included from ..\QuestionsDb.cpp:8:
+..\QuestionsDb.h:53:135: error: default argument missing for parameter 4 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const std::string&, int, int)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const std::string& ans = "", const int qId, const int op);
+      |                                                                                                                             ~~~~~~~~~~^~~
+..\QuestionsDb.h:53:115: note: ...following parameter 3 which has a default argument
+   53 |         void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const std::string& ans = "", const int qId, const int op);
+      |                                                                                                ~~~~~~~~~~~~~~~~~~~^~~~~~~~
+..\QuestionsDb.h:53:150: error: default argument missing for parameter 5 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const std::string&, int, int)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const std::string& ans = "", const int qId, const int op);
+      |                                                                                                                                            ~~~~~~~~~~^~
+..\QuestionsDb.cpp:84:6: error: default argument given for parameter 3 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const std::string&, int, int)'
+   84 | void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const std::string& ans = "", const int id, const int op)
+      |      ^~~~~~~~~~~
+..\QuestionsDb.h:53:14: note: previous specification in 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const std::string&, int, int)' here
+   53 |         void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const std::string& ans = "", const int qId, const int op);
+      |              ^~~~~~~~~~~~~~
+17:23:05 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::update_answer(int, const std::string&)':
+..\DBmanager.cpp:182:59: error: cannot convert 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} to 'int'
+  182 |                 questionsdb.get_writeLines(writeLines, v, ans, qId, ANSWER);
+      |                                                           ^~~
+      |                                                           |
+      |                                                           const std::string {aka const std::__cxx11::basic_string<char>}
+In file included from ..\DBmanager.h:11,
+                 from ..\DBmanager.cpp:8:
+..\QuestionsDb.h:53:107: note:   initializing argument 3 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, const std::string&)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, const std::string& ans = "");
+      |                                                                                                 ~~~~~~~~~~^~
+17:23:50 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+..\QuestionsDb.cpp:84:6: error: default argument given for parameter 5 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, const std::string&)'
+   84 | void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, const std::string& ans = "")
+      |      ^~~~~~~~~~~
+In file included from ..\QuestionsDb.cpp:8:
+..\QuestionsDb.h:53:14: note: previous specification in 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, const std::string&)' here
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, const std::string& ans = "");
+      |              ^~~~~~~~~~~~~~
+17:24:18 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+..\QuestionsDb.cpp:84:6: error: default argument given for parameter 5 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, std::string)'
+   84 | void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, const std::string ans = "")
+      |      ^~~~~~~~~~~
+In file included from ..\QuestionsDb.cpp:8:
+..\QuestionsDb.h:53:14: note: previous specification in 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, std::string)' here
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, const std::string ans = "");
+      |              ^~~~~~~~~~~~~~
+17:24:59 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+..\QuestionsDb.cpp:84:6: error: default argument given for parameter 5 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, std::string)'
+   84 | void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, std::string ans = "")
+      |      ^~~~~~~~~~~
+In file included from ..\QuestionsDb.cpp:8:
+..\QuestionsDb.h:53:14: note: previous specification in 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, std::string)' here
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, std::string ans = "");
+      |              ^~~~~~~~~~~~~~
+17:25:33 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'void DBmanager::del_q_from_file(int)':
+..\DBmanager.cpp:217:43: error: no matching function for call to 'QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, const int&, int)'
+  217 |                 questionsdb.get_writeLines(writeLines, v, qId, DELETE);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\DBmanager.h:11,
+                 from ..\DBmanager.cpp:8:
+..\QuestionsDb.h:53:14: note: candidate: 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, int, int, std::string)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int id, const int op, std::string ans);
+      |              ^~~~~~~~~~~~~~
+..\QuestionsDb.h:53:14: note:   candidate expects 5 arguments, 4 provided
+17:27:10 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+17:28:08 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+In file included from ..\QuestionsDb.cpp:8:
+..\QuestionsDb.h:53:133: error: default argument missing for parameter 4 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, std::string, int, int)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const std::string ans="", const int id, const int op);
+      |                                                                                                                           ~~~~~~~~~~^~
+..\QuestionsDb.h:53:115: note: ...following parameter 3 which has a default argument
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const std::string ans="", const int id, const int op);
+      |                                                                                                 ~~~~~~~~~~~~~~~~~~^~~~~~
+..\QuestionsDb.h:53:147: error: default argument missing for parameter 5 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, std::string, int, int)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const std::string ans="", const int id, const int op);
+      |                                                                                                                                         ~~~~~~~~~~^~
+17:28:22 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\Signuphandler.cpp:10:
+..\QuestionsDb.h:53:127: error: default argument missing for parameter 4 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, std::string, int, int)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, std::string ans="", const int id, const int op);
+      |                                                                                                                     ~~~~~~~~~~^~
+..\QuestionsDb.h:53:109: note: ...following parameter 3 which has a default argument
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, std::string ans="", const int id, const int op);
+      |                                                                                                 ~~~~~~~~~~~~^~~~~~
+..\QuestionsDb.h:53:141: error: default argument missing for parameter 5 of 'void QuestionsDb::get_writeLines(std::vector<std::__cxx11::basic_string<char> >&, std::vector<std::__cxx11::basic_string<char> >&, std::string, int, int)'
+   53 |         void get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, std::string ans="", const int id, const int op);
+      |                                                                                                                                   ~~~~~~~~~~^~
+17:28:57 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+17:29:20 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+17:29:40 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+Info: Nothing to build for askme-oo
+17:34:31 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+17:39:34 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+17:51:33 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+17:52:16 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo

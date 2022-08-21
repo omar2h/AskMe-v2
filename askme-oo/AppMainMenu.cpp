@@ -36,7 +36,7 @@ void AppMainMenu::run(int choice, User &user)
 	}
 	else if (choice == DELETE)
 	{
-		//delete_question(user.getId());
+		delete_question(user.getId());
 	}
 }
 
@@ -96,7 +96,7 @@ void AppMainMenu::answer(const int uId)
 			return;
 		/* check whether user received this question or not. can only answer if it is received */
 		try{
-			q = DB.get_q_toUser(qId, uId);
+			q = DB.get_q(qId, uId, TO);
 			break;
 		}
 		catch(const int err){
@@ -115,31 +115,30 @@ void AppMainMenu::answer(const int uId)
 	std::cout << "\n\n---- Answer Saved ----\n\n";
 }
 
-//void AppMainMenu::delete_question(const int uId)
-//{
-//	DBmanager DB;
-//	Question q;
-//	int qId;
-//
-//	/* enter question id */
-//	while (1)
-//	{
-//		std::cout << "Enter question id to delete or -1 to cancel: ";
-//		std::cin >> qId;
-//
-//		if (qId == -1)
-//			return;
-//
-//		/* user can only delete question asked or received by user */
-//		try
-//		{
-//			q = DB.get_q_from_toUser(qId, uId);
-//			break;
-//		}
-//		catch(const int err){
-//			throw;
-//		}
-//	}
-//	DB.questionsDb.delete_q(qId);
-//	std::cout << "\n\n ----- Question Deleted -----\n\n";
-//}
+void AppMainMenu::delete_question(const int uId)
+{
+	DBmanager DB;
+	Question q;
+	int qId;
+
+	/* enter question id */
+	while (1)
+	{
+		std::cout << "Enter question id to delete or -1 to cancel: ";
+		std::cin >> qId;
+
+		if (qId == -1)
+			return;
+
+		/* user can only delete question asked or received by user */
+		try
+		{
+			DB.del_q(qId, uId);
+			break;
+		}
+		catch(const int err){
+			throw;
+		}
+	}
+	std::cout << "\n\n ----- Question Deleted -----\n\n";
+}

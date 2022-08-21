@@ -81,18 +81,20 @@ void QuestionsDb::update_question_info(const std::vector<std::string> &v, Questi
 	q.setAns(v[ANSWERTEXT]);
 }
 
-void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const std::string& ans, const int id, const int op)
+void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int qId, const int op, const std::string& ans)
 {
 	std::string writeLine{};
 
-	if (stoi(v[ID]) == id)
+	if(op == DELETE && (stoi(v[ID]) == qId || stoi(v[THREAD_ID]) == qId))
 	{
-		if(op == ANSWER)
-		{
-			v[ANSWERED_BOOL] = "1";
-			v[ANSWERTEXT] = ans;
-		}
+		return;
 	}
+	else if (op == ANSWER && stoi(v[ID]) == qId)
+	{
+		v[ANSWERED_BOOL] = "1";
+		v[ANSWERTEXT] = ans;
+	}
+
 	for (int i = 0; i < (int)v.size(); i++)
 	{
 		if (i)

@@ -109,7 +109,7 @@ void DBmanager::get_Qs_from_user(const int uId, std::vector<Question> &qv)
 	}
 }
 
-Question DBmanager::get_q_toUser(const int qId, const int uId)
+Question DBmanager::get_q(const int qId, const int uId, const int dir)
 {
 	Question q;
 	/* pair to store question and bool whether exist or not */
@@ -122,27 +122,47 @@ Question DBmanager::get_q_toUser(const int qId, const int uId)
 		throw;
 	}
 	/* check if q toId is the same as user id signifying user received question*/
-	if (q.getToId() != uId)
+	if(dir == FROM)
+	{
+		if(q.getFromId() != uId)
+			throw 4;
+	}
+	else if(dir == TO)
+	{
+		if(q.getToId() != uId)
+			throw 4;
+	}
+	else if(dir == FROM_TO)
+	{
+		if (q.getToId() != uId && q.getFromId() != uId)
+			throw 4;
+	}
+	else
 		throw 4;
 	return q;
 }
 
-Question DBmanager::get_q_from_toUser(const int qId, const int uId)
+bool DBmanager::check_user_has_q(const int qId, const int uId, const int dir)
 {
-	Question q;
-	/* pair to store question and bool whether exist or not */
-	try
+	Question q = get_question(qId);
+	if(dir == FROM)
 	{
-		q = get_question(qId);
+		if(q.getFromId() != uId)
+			throw 4;
 	}
-	catch(const int err)
+	else if(dir == TO)
 	{
-		throw;
+		if(q.getToId() != uId)
+			throw 4;
 	}
-	/* check if q toId is the same as user id signifying user received question*/
-	if (q.getToId() != uId || q.getFromId() != uId)
+	else if(dir == FROM_TO)
+	{
+		if (q.getToId() != uId && q.getFromId() != uId)
+			throw 4;
+	}
+	else
 		throw 4;
-	return q;
+	return 1;
 }
 
 void DBmanager::update_answer(const int qId, const std::string& ans){
@@ -156,48 +176,47 @@ void DBmanager::update_answer(const int qId, const std::string& ans){
 	{
 		std::vector<std::string> v;
 		split_line_toVector(line, v, del);
-		questionsdb.get_writeLines(writeLines, v, ans, qId, ANSWER);
+		questionsdb.get_writeLines(writeLines, v, qId, ANSWER, ans);
 	}
 	write_file_lines(tempPath, writeLines, false);
 	remove(path);
 	rename(tempPath, path);
 }
 
-//void DBmanager::del_q(const int qId, const int uId)
-//{
-//	Question q;
-//	/* user can only delete question asked or received by user */
-//	try
-//	{
-//		q = get_q_from_toUser(qId, uId);
-//	}
-//	catch(const int err)
-//	{
-//		throw;
-//	}
-//
-//
-//}
+void DBmanager::del_q(const int qId, const int uId)
+{
+	Question q;
+	/* user can only delete question asked or received by user */
+	try
+	{
+		check_user_has_q(qId, uId, FROM_TO);
+	}
+	catch(const int err)
+	{
+		throw;
+	}
 
-//void DBmanager::del_q_from_file()
-//{
-//	const char* path = questionsdb.get_pathChar();
-//	const char* tempPath = TEMPTXT_PATH;
-//	const std::string del = questionsdb.get_delimiter();
-//	const int id = q.getId();
-//	std::vector<std::string> readLines, writeLines;
-//	read_file_lines(path, readLines);
-//
-//	for (auto const &line : readLines)
-//	{
-//		std::vector<std::string> v;
-//		split_line_toVector(line, v, del);
-//		questionsdb.get_writeLines(writeLines, v, q, id);
-//	}
-//	write_file_lines(tempPath, writeLines, false);
-//	remove(path);
-//	rename(tempPath, path);
-//}
+	del_q_from_file(qId);
+}
+
+void DBmanager::del_q_from_file(const int qId)
+{
+	const char* path = questionsdb.get_pathChar();
+	const char* tempPath = TEMPTXT_PATH;
+	const std::string del = questionsdb.get_delimiter();
+	std::vector<std::string> readLines, writeLines;
+	read_file_lines(path, readLines);
+
+	for (auto const &line : readLines)
+	{
+		std::vector<std::string> v;
+		split_line_toVector(line, v, del);
+		questionsdb.get_writeLines(writeLines, v, qId, DELETE);
+	}
+	write_file_lines(tempPath, writeLines, false);
+	remove(path);
+	rename(tempPath, path);
+}
 
 Question DBmanager::get_question(const int id)
 {
