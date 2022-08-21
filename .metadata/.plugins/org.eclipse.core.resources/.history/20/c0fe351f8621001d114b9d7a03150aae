@@ -6,7 +6,7 @@
  */
 
 #include "Inputscanner.h"
-
+#include <iostream>
 Input_scanner::Input_scanner()
 {
 	// TODO Auto-generated constructor stub
@@ -26,18 +26,18 @@ int Input_scanner::get_choice(const int low, const int high)
 	return 0;
 }
 
+char Input_scanner::get_choice(const char a, const char b)
+{
+	char c{};
+	std::cin >> c;
+	if(c == a || c == b)
+		return c;
+	return '0'
+}
+
 bool Input_scanner::verify_choice(const int choice, const int low, const int high)
 {
 	if (choice < low && choice > high)
 		return false;
 	return true;
-}
-
-std::string Input_scanner::get_qText_from_user()
-{
-	std::string qText;
-	std::cin.ignore();
-	std::cout << "Enter Your Question: ";
-	std::getline(std::cin, qText);
-	return qText;
 }

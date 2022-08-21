@@ -27,19 +27,35 @@ std::string UsersDb::get_delimiter()
 {
 	return del;
 }
-bool UsersDb::get_user(const std::vector<std::string> &v, User& user)
-{
-	int id = user.getId();
-	if (stoi(v[ID]) == id)
-	{
-		user.setUsername(v[USERNAME]);
-		user.setAllowAnonQs(v[ALLOW_ANON_Q]);
-		return 1;
-	}
-	return 0;
- }
+// std::pair<User, bool> UsersDb::get_user(const int id)
+//{
+//	User user;
+//	DbManager dbManager;
+//	std::pair<User, bool> userPair;
+//	userPair.second = 0;
+//
+//	const std::string path = USERSTXT_PATH;
+//	std::vector<std::string> lines;
+//	dbManager.read_file_lines(path, lines);
+//
+//	for (auto &line : lines)
+//	{
+//		std::vector<std::string> v;
+//		dbManager.split_line_toVector(line, v, DELIMITER);
+//
+//		if (stoi(v[ID]) == id)
+//		{
+//			user.id = stoi(v[ID]);
+//			user.allowAnonQs = stoi(v[ALLOW_ANON_Q]);
+//			userPair.first = user;
+//			userPair.second = 1;
+//			return userPair;
+//		}
+//	}
+//	return userPair;
+// }
 
-bool UsersDb::check_user_login(const std::vector<std::string> &v, User &user, const std::string username, const std::string password)
+bool UsersDb::check_user_login(std::vector<std::string> &v, User &user, const std::string username, const std::string password)
 {
 	if (username == v[USERNAME] && password == v[PASSWORD])
 	{

@@ -158,7 +158,7 @@ void AppMainMenu::ask(const int uId)
 	User toUser;
 	int toUserId;
 	/* update question fromId to the current user's id */
-	q.setFromId(uId);
+	q.fromId = uId;
 
 	/* Enter toUser id */
 	while (1)
@@ -168,7 +168,7 @@ void AppMainMenu::ask(const int uId)
 		if (toUserId == -1)
 			return;
 
-		toUser.setId(toUserId);
+		toUser.id = toUserId;
 		/* check whether user exists then. user is sent by reference so it is updated */
 		/* sending user as a parameter not just the id to check later if it allows anon questions or not*/
 		try

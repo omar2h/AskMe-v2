@@ -85,9 +85,9 @@ void DBmanager::get_user(User& user)
 		std::vector<std::string> v;
 		split_line_toVector(line, v, del);
 		if (usersdb.get_user(v, user))
-			return;
+			return user;
 	}
-	throw 3;
+	throw 2;
 }
 
 void DBmanager::get_Qs_to_user(const int uId, std::map<int, std::vector<Question>> &mp)
@@ -257,27 +257,6 @@ Question DBmanager::get_question(const int id)
 			return q;
 	}
 	throw 6;
-}
-
-void DBmanager::add_question(Question& q)
-{
-	std::vector<std::string> lines;
-	std::string path = questionsdb.get_path();
-	std::string del = questionsdb.get_delimiter();
-
-	q.setId(generate_id(path));
-
-	std::string line = questionsdb.get_question_string(q);
-	lines.push_back(line);
-	try
-	{
-	write_file_lines(path, lines, true);
-
-	}
-	catch(const int err)
-	{
-		throw;
-	}
 }
 
 void DBmanager::read_file_lines(std::string path, std::vector<std::string> &lines)

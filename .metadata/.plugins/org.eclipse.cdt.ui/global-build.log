@@ -2318,3 +2318,57 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
 g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
 Info: Nothing to build for askme-oo
+18:49:32 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+21:58:15 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Inputscanner.o "..\\Inputscanner.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o UsersDb.o "..\\UsersDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::run(int, User&)':
+..\AppMainMenu.cpp:44:17: error: 'ask' was not declared in this scope
+   44 |                 ask(user.getId());
+      |                 ^~~
+..\AppMainMenu.cpp: At global scope:
+..\AppMainMenu.cpp:151:6: error: no declaration matches 'void AppMainMenu::ask(int)'
+  151 | void AppMainMenu::ask(const int uId)
+      |      ^~~~~~~~~~~
+..\AppMainMenu.cpp:151:6: note: no functions named 'void AppMainMenu::ask(int)'
+In file included from ..\AppMainMenu.cpp:8:
+..\AppMainMenu.h:22:7: note: 'class AppMainMenu' defined here
+   22 | class AppMainMenu
+      |       ^~~~~~~~~~~
+21:58:57 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::ask(int)':
+..\AppMainMenu.cpp:161:11: error: 'int Question::fromId' is private within this context
+  161 |         q.fromId = uId;
+      |           ^~~~~~
+In file included from ..\DBmanager.h:12,
+                 from ..\AppMainMenu.cpp:9:
+..\Question.h:18:31: note: declared private here
+   18 |         int id{}, threadId{}, fromId{}, toId{};
+      |                               ^~~~~~
+..\AppMainMenu.cpp:171:24: error: 'int User::id' is private within this context
+  171 |                 toUser.id = toUserId;
+      |                        ^~
+In file included from ..\AppMainMenu.cpp:10:
+..\User.h:15:13: note: declared private here
+   15 |         int id{};
+      |             ^~
+21:59:46 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo

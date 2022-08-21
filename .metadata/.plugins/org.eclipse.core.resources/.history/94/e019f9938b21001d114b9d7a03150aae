@@ -9,7 +9,6 @@
 #include "DBmanager.h"
 #include "User.h"
 #include "Question.h"
-#include "Inputscanner.h"
 
 AppMainMenu::AppMainMenu()
 {
@@ -151,14 +150,13 @@ void AppMainMenu::delete_question(const int uId)
 void AppMainMenu::ask(const int uId)
 {
 	DBmanager DB;
-	Input_scanner input_scanner;
 	/* variable to store new question asked by user */
 	Question q;
 	/* variable to store the user being asked */
 	User toUser;
 	int toUserId;
 	/* update question fromId to the current user's id */
-	q.setFromId(uId);
+	q.fromId = uId;
 
 	/* Enter toUser id */
 	while (1)
@@ -168,7 +166,7 @@ void AppMainMenu::ask(const int uId)
 		if (toUserId == -1)
 			return;
 
-		toUser.setId(toUserId);
+		toUser.id = toUserId;
 		/* check whether user exists then. user is sent by reference so it is updated */
 		/* sending user as a parameter not just the id to check later if it allows anon questions or not*/
 		try
@@ -185,9 +183,9 @@ void AppMainMenu::ask(const int uId)
 	q.setToId(toUser.getId());
 
 	/* check the user being asked if it allows anon questions and print a disclaimer if it does not*/
-	if (!toUser.getAllowAnonQs())
+	if (!toUser.allowAnonQs)
 	{
-		q.setAnon(false);
+		q.anon = 0;
 		std::cout << "Note: This User doesn't Allow Anonymous Questions\n";
 	}
 	int qId;
@@ -198,7 +196,7 @@ void AppMainMenu::ask(const int uId)
 		std::cout << "Enter question thread ID or -1 to Ask a New Question: ";
 		std::cin >> qId;
 		/* only if user allow anon questions you can ask anon questions*/
-		if (toUser.getAllowAnonQs())
+		if (toUser.allowAnonQs)
 		{
 			while (1)
 			{
@@ -207,38 +205,38 @@ void AppMainMenu::ask(const int uId)
 				std::cin >> c;
 				if (c == 'y')
 				{
-					q.setAnon(true);
+					q.anon = 1;
 					break;
 				}
 				if (c == 'n')
 				{
-					q.setAnon(false);
+					q.anon = 0;
 					break;
 				}
 			}
 		}
 		if (qId == -1)
 		{
-			q.setText(input_scanner.get_qText_from_user()), q.setThreadId(-1), q.setAnswered(false);
+			q.text = get_qText_from_user(), q.threadId = -1, q.answered = 0;
 			break;
 		}
 		else
 		{
 			/* if it is not parent question then check whether the user being asked has the parent thread or not*/
-			try
+			if (DB.check_user_has_q(qId, toUserId))
 			{
-				DB.check_user_has_q(qId, toUserId, TO, q, true);
-				q.setThreadId(qId), q.setAnswered(false);
-				q.setText(input_scanner.get_qText_from_user());
+				q.threadId = qId, q.answered = 0;
+				q.text = get_qText_from_user();
 				break;
 			}
-			catch(const int err)
+			else
 			{
-				throw;
+				/* error: Question ID doesn't seem to exist for this user */
+				error.print(4);
 			}
 		}
 	}
 
-	DB.add_question(q);
+	DB.questionsDb.add_question(q);
 	std::cout << "\n\n--------- Question Saved ----------\n\n";
 }

@@ -49,7 +49,6 @@ public:
 	void del_q(const int qId, const int uId);
 	int generate_id(const std::string path);
 	void get_user(User& user);
-	void add_question(Question& q);
 };
 
 #endif /* DBMANAGER_H_ */
