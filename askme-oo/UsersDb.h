@@ -65,7 +65,7 @@ public:
 	bool check_user_login(const std::vector<std::string> &v, User &user, const std::string username, const std::string password);
 	std::string get_user_string(User &);
 
-	bool get_user(const std::vector<std::string> &v, User&);
+	bool get_user(const std::vector<std::string> &v, User &);
 };
 
 #endif /* USERSDB_H_ */

@@ -47,10 +47,6 @@ void AppMainMenu::run(int choice, User &user)
 	{
 		list_users();
 	}
-	else if (choice == FEED)
-	{
-		print_feed();
-	}
 }
 
 void AppMainMenu::print_questions_received(const int uId)
@@ -108,13 +104,11 @@ void AppMainMenu::answer(const int uId)
 		if (qId == -1)
 			return;
 		/* check whether user received this question or not. can only answer if it is received */
-		try
-		{
+		try{
 			q = DB.get_q(qId, uId, TO);
 			break;
 		}
-		catch (const int err)
-		{
+		catch(const int err){
 			throw;
 		}
 	}
@@ -151,8 +145,7 @@ void AppMainMenu::delete_question(const int uId)
 			DB.del_q(qId, uId);
 			break;
 		}
-		catch (const int err)
-		{
+		catch(const int err){
 			throw;
 		}
 	}
@@ -187,7 +180,7 @@ void AppMainMenu::ask(const int uId)
 			DB.get_user(toUser);
 			break;
 		}
-		catch (const int err)
+		catch(const int err)
 		{
 			throw;
 		}
@@ -243,7 +236,7 @@ void AppMainMenu::ask(const int uId)
 				q.setText(input_scanner.get_qText_from_user());
 				break;
 			}
-			catch (const int err)
+			catch(const int err)
 			{
 				throw;
 			}
@@ -258,14 +251,4 @@ void AppMainMenu::list_users()
 {
 	DBmanager DB;
 	DB.print_users();
-}
-
-void AppMainMenu::print_feed()
-{
-	DBmanager DB;
-	std::vector<Question> qv;
-	qv = DB.get_answered_Qs();
-
-	for (const Question &q : qv)
-		q.print_answered();
 }

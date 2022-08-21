@@ -25,7 +25,7 @@ std::string QuestionsDb::get_path()
 	return path;
 }
 
-const char* QuestionsDb::get_pathChar()
+const char *QuestionsDb::get_pathChar()
 {
 	return path.c_str();
 }
@@ -61,8 +61,10 @@ void QuestionsDb::get_Q_fromUser(const std::vector<std::string> &v, std::vector<
 	}
 }
 
-bool QuestionsDb::get_Q(const std::vector<std::string> &v, Question &q, const int qId){
-	if (stoi(v[ID]) == qId){
+bool QuestionsDb::get_Q(const std::vector<std::string> &v, Question &q, const int qId)
+{
+	if (stoi(v[ID]) == qId)
+	{
 		update_question_info(v, q);
 		return 1;
 	}
@@ -81,11 +83,11 @@ void QuestionsDb::update_question_info(const std::vector<std::string> &v, Questi
 	q.setAns(v[ANSWERTEXT]);
 }
 
-void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const int qId, const int op, const std::string& ans)
+void QuestionsDb::get_writeLines(std::vector<std::string> &writeLines, std::vector<std::string> &v, const int qId, const int op, const std::string &ans)
 {
 	std::string writeLine{};
 
-	if(op == DELETE && (stoi(v[ID]) == qId || stoi(v[THREAD_ID]) == qId))
+	if (op == DELETE && (stoi(v[ID]) == qId || stoi(v[THREAD_ID]) == qId))
 	{
 		return;
 	}
@@ -105,7 +107,7 @@ void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vec
 	writeLines.push_back(writeLine);
 }
 
-std::string QuestionsDb::get_question_string(const Question& q)
+std::string QuestionsDb::get_question_string(const Question &q)
 {
 	return q.getIdString() + del + q.getThreadIdString() + del + q.getFromIdString() + del + q.getToIdString() + del + q.getAnonString() + del + q.getAnsweredString() + del + q.getText() + del + q.getAns();
 }

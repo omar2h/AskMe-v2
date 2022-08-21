@@ -67,7 +67,7 @@ void DBmanager::add_user(User &user)
 	}
 }
 
-void DBmanager::get_user(User &user)
+void DBmanager::get_user(User& user)
 {
 	const std::string path = usersdb.get_path();
 	const std::string del = usersdb.get_delimiter();
@@ -140,7 +140,7 @@ Question DBmanager::get_q(const int qId, const int uId, const int dir)
 	{
 		q = get_question(qId);
 	}
-	catch (const int err)
+	catch(const int err)
 	{
 		throw;
 	}
@@ -149,28 +149,28 @@ Question DBmanager::get_q(const int qId, const int uId, const int dir)
 	{
 		check_user_has_q(qId, uId, dir, q, true);
 	}
-	catch (const int err)
+	catch(const int err)
 	{
 		throw;
 	}
 	return q;
 }
 
-bool DBmanager::check_user_has_q(const int qId, const int uId, const int dir, Question &q, const bool isQ)
+bool DBmanager::check_user_has_q(const int qId, const int uId, const int dir, Question& q, const bool isQ)
 {
-	if (!isQ)
+	if(!isQ)
 		q = get_question(qId);
-	if (dir == FROM)
+	if(dir == FROM)
 	{
-		if (q.getFromId() != uId)
+		if(q.getFromId() != uId)
 			throw 4;
 	}
-	else if (dir == TO)
+	else if(dir == TO)
 	{
-		if (q.getToId() != uId)
+		if(q.getToId() != uId)
 			throw 4;
 	}
-	else if (dir == FROM_TO)
+	else if(dir == FROM_TO)
 	{
 		if (q.getToId() != uId && q.getFromId() != uId)
 			throw 4;
@@ -180,10 +180,9 @@ bool DBmanager::check_user_has_q(const int qId, const int uId, const int dir, Qu
 	return 1;
 }
 
-void DBmanager::update_answer(const int qId, const std::string &ans)
-{
-	const char *path = questionsdb.get_pathChar();
-	const char *tempPath = TEMPTXT_PATH;
+void DBmanager::update_answer(const int qId, const std::string& ans){
+	const char* path = questionsdb.get_pathChar();
+	const char* tempPath = TEMPTXT_PATH;
 	const std::string del = questionsdb.get_delimiter();
 	std::vector<std::string> readLines, writeLines;
 	read_file_lines(path, readLines);
@@ -207,7 +206,7 @@ void DBmanager::del_q(const int qId, const int uId)
 	{
 		check_user_has_q(qId, uId, FROM_TO, q, false);
 	}
-	catch (const int err)
+	catch(const int err)
 	{
 		throw;
 	}
@@ -217,8 +216,8 @@ void DBmanager::del_q(const int qId, const int uId)
 
 void DBmanager::del_q_from_file(const int qId)
 {
-	const char *path = questionsdb.get_pathChar();
-	const char *tempPath = TEMPTXT_PATH;
+	const char* path = questionsdb.get_pathChar();
+	const char* tempPath = TEMPTXT_PATH;
 	const std::string del = questionsdb.get_delimiter();
 	std::vector<std::string> readLines, writeLines;
 	read_file_lines(path, readLines);
@@ -254,13 +253,13 @@ Question DBmanager::get_question(const int id)
 	{
 		std::vector<std::string> v;
 		split_line_toVector(line, v, del);
-		if (questionsdb.get_Q(v, q, id))
+		if(questionsdb.get_Q(v, q, id))
 			return q;
 	}
 	throw 6;
 }
 
-void DBmanager::add_question(Question &q)
+void DBmanager::add_question(Question& q)
 {
 	std::vector<std::string> lines;
 	std::string path = questionsdb.get_path();
@@ -272,50 +271,13 @@ void DBmanager::add_question(Question &q)
 	lines.push_back(line);
 	try
 	{
-		write_file_lines(path, lines, true);
+	write_file_lines(path, lines, true);
+
 	}
-	catch (const int err)
+	catch(const int err)
 	{
 		throw;
 	}
-}
-
-void DBmanager::print_users()
-{
-	const std::string path = usersdb.get_path();
-	const std::string del = usersdb.get_delimiter();
-	std::vector<std::string> lines;
-	read_file_lines(path, lines);
-
-	for (auto &line : lines)
-	{
-		std::vector<std::string> v;
-		split_line_toVector(line, v, del);
-		std::cout << "ID: " << v[ID] << "\tUserName: " << v[USERNAME] << '\n';
-	}
-	std::cout << '\n';
-}
-
-std::vector<Question> DBmanager::get_answered_Qs()
-{
-	Question q;
-	const std::string path = questionsdb.get_path();
-	const std::string del = questionsdb.get_delimiter();
-	std::vector<Question> qv;
-	std::vector<std::string> lines;
-	read_file_lines(path, lines);
-
-	for (auto &line : lines)
-	{
-		std::vector<std::string> v;
-		split_line_toVector(line, v, del);
-		if (stoi(v[ANSWERED_BOOL]))
-		{
-			questionsdb.update_question_info(v, q);
-			qv.push_back(q);
-		}
-	}
-	return qv;
 }
 
 void DBmanager::read_file_lines(std::string path, std::vector<std::string> &lines)

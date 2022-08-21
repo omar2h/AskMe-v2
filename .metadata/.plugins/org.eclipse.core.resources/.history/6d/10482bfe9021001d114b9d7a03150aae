@@ -108,13 +108,11 @@ void AppMainMenu::answer(const int uId)
 		if (qId == -1)
 			return;
 		/* check whether user received this question or not. can only answer if it is received */
-		try
-		{
+		try{
 			q = DB.get_q(qId, uId, TO);
 			break;
 		}
-		catch (const int err)
-		{
+		catch(const int err){
 			throw;
 		}
 	}
@@ -151,8 +149,7 @@ void AppMainMenu::delete_question(const int uId)
 			DB.del_q(qId, uId);
 			break;
 		}
-		catch (const int err)
-		{
+		catch(const int err){
 			throw;
 		}
 	}
@@ -187,7 +184,7 @@ void AppMainMenu::ask(const int uId)
 			DB.get_user(toUser);
 			break;
 		}
-		catch (const int err)
+		catch(const int err)
 		{
 			throw;
 		}
@@ -243,7 +240,7 @@ void AppMainMenu::ask(const int uId)
 				q.setText(input_scanner.get_qText_from_user());
 				break;
 			}
-			catch (const int err)
+			catch(const int err)
 			{
 				throw;
 			}
@@ -265,7 +262,6 @@ void AppMainMenu::print_feed()
 	DBmanager DB;
 	std::vector<Question> qv;
 	qv = DB.get_answered_Qs();
-
 	for (const Question &q : qv)
 		q.print_answered();
 }

@@ -42,15 +42,16 @@ public:
 	void add_user(User &user);
 	void get_Qs_to_user(const int uId, std::map<int, std::vector<Question>> &);
 	void get_Qs_from_user(const int uId, std::vector<Question> &qv);
-	bool check_user_has_q(const int qId, const int uId, const int dir, Question &q, const bool isQ);
+	bool check_user_has_q(const int qId, const int uId, const int dir, Question& q, const bool isQ);
 	Question get_q(const int qId, const int uId, const int dir);
 	Question get_question(const int id);
-	void update_answer(const int qId, const std::string &ans);
+	void update_answer(const int qId, const std::string& ans);
 	void del_q(const int qId, const int uId);
 	int generate_id(const std::string path);
-	void get_user(User &user);
-	void add_question(Question &q);
+	void get_user(User& user);
+	void add_question(Question& q);
 	void print_users();
+	void print_answered_Qs();
 	std::vector<Question> get_answered_Qs();
 };
 

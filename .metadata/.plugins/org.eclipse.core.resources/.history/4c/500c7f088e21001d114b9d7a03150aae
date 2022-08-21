@@ -27,7 +27,6 @@ class AppMainMenu
 	void delete_question(const int uId);
 	void ask(const int uId);
 	void list_users();
-	void print_feed();
 
 public:
 	AppMainMenu();

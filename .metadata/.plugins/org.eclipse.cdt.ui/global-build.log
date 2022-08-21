@@ -2372,3 +2372,83 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp"
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
 g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
 Info: Nothing to build for askme-oo
+22:32:14 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Question.o "..\\Question.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o App.o "..\\App.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+..\DBmanager.cpp: In member function 'std::vector<Question> DBmanager::get_answered_Qs()':
+..\DBmanager.cpp:314:57: error: 'void QuestionsDb::update_question_info(const std::vector<std::__cxx11::basic_string<char> >&, Question&)' is private within this context
+  314 |                         questionsdb.update_question_info(v, q);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from ..\DBmanager.h:11,
+                 from ..\DBmanager.cpp:8:
+..\QuestionsDb.h:41:14: note: declared private here
+   41 |         void update_question_info(const std::vector<std::string> &v, Question &q);
+      |              ^~~~~~~~~~~~~~~~~~~~
+22:33:30 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::print_feed()':
+..\AppMainMenu.cpp:260:35: error: no match for 'operator=' (operand types are 'std::vector<Question>' and 'void')
+  260 |         qv = DB.print_answered_Qs();
+      |                                   ^
+In file included from C:/msys64/mingw64/include/c++/12.1.0/vector:70,
+                 from ..\UsersDb.h:11,
+                 from ..\DBmanager.h:10,
+                 from ..\AppMainMenu.cpp:9:
+C:/msys64/mingw64/include/c++/12.1.0/bits/vector.tcc:204:5: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = Question; _Alloc = std::allocator<Question>]'
+  204 |     vector<_Tp, _Alloc>::
+      |     ^~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/vector.tcc:205:42: note:   no known conversion for argument 1 from 'void' to 'const std::vector<Question>&'
+  205 |     operator=(const vector<_Tp, _Alloc>& __x)
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from C:/msys64/mingw64/include/c++/12.1.0/vector:64:
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_vector.h:761:7: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = Question; _Alloc = std::allocator<Question>]'
+  761 |       operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_vector.h:761:26: note:   no known conversion for argument 1 from 'void' to 'std::vector<Question>&&'
+  761 |       operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 ~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_vector.h:783:7: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = Question; _Alloc = std::allocator<Question>]'
+  783 |       operator=(initializer_list<value_type> __l)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/12.1.0/bits/stl_vector.h:783:46: note:   no known conversion for argument 1 from 'void' to 'std::initializer_list<Question>'
+  783 |       operator=(initializer_list<value_type> __l)
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+22:34:20 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+22:35:19 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+..\AppMainMenu.cpp: In member function 'void AppMainMenu::run(int, User&)':
+..\AppMainMenu.cpp:50:28: error: 'PRINT_FEED' was not declared in this scope
+   50 |         else if (choice == PRINT_FEED)
+      |                            ^~~~~~~~~~
+22:35:29 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+22:36:58 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+22:37:47 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo

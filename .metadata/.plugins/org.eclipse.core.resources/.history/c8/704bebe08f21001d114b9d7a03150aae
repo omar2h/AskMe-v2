@@ -56,7 +56,6 @@ public:
 	void print() const;
 	void print_asked() const;
 	void print_child(int space) const;
-	void print_answered() const;
 };
 
 void print_children(std::vector<Question> qv, std::map<int, std::vector<Question>> &mp, int spaces);

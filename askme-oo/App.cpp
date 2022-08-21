@@ -74,7 +74,8 @@ void App::run()
 			choice = input_scanner.get_choice(1, 8);
 			if (!choice)
 				continue;
-			try{
+			try
+			{
 				appMain.run(choice, user);
 			}
 			catch (const int err)
