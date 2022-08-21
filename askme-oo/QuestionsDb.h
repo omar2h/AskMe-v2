@@ -28,6 +28,10 @@ class Question;
 #define ANSWERTEXT 7
 #endif
 
+#ifndef ANSWER
+#define ANSWER 1
+#endif
+
 class QuestionsDb
 {
 	std::string path;
@@ -45,7 +49,7 @@ public:
 	void get_Q_toUser(const std::vector<std::string> &, std::map<int, std::vector<Question>> &, const int uId);
 	void get_Q_fromUser(const std::vector<std::string> &v, std::vector<Question> &qv, const int uId);
 	bool get_Q(const std::vector<std::string> &v, Question &q, const int qId);
-	void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const Question& q, const int id);
+	void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const std::string& ans, const int qId, const int op);
 	std::string get_question_string(const Question& q);
 };
 

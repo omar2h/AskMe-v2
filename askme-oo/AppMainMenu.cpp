@@ -34,6 +34,10 @@ void AppMainMenu::run(int choice, User &user)
 	{
 		answer(user.getId());
 	}
+	else if (choice == DELETE)
+	{
+		//delete_question(user.getId());
+	}
 }
 
 void AppMainMenu::print_questions_received(const int uId)
@@ -107,8 +111,35 @@ void AppMainMenu::answer(const int uId)
 	std::cout << "Enter answer: ";
 	std::string ans;
 	std::getline(std::cin, ans);
-	q.setAns(ans);
-	q.setAnswered(1);
-	DB.update_answer(q);
+	DB.update_answer(qId, ans);
 	std::cout << "\n\n---- Answer Saved ----\n\n";
 }
+
+//void AppMainMenu::delete_question(const int uId)
+//{
+//	DBmanager DB;
+//	Question q;
+//	int qId;
+//
+//	/* enter question id */
+//	while (1)
+//	{
+//		std::cout << "Enter question id to delete or -1 to cancel: ";
+//		std::cin >> qId;
+//
+//		if (qId == -1)
+//			return;
+//
+//		/* user can only delete question asked or received by user */
+//		try
+//		{
+//			q = DB.get_q_from_toUser(qId, uId);
+//			break;
+//		}
+//		catch(const int err){
+//			throw;
+//		}
+//	}
+//	DB.questionsDb.delete_q(qId);
+//	std::cout << "\n\n ----- Question Deleted -----\n\n";
+//}

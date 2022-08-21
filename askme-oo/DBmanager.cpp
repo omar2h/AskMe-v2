@@ -126,11 +126,29 @@ Question DBmanager::get_q_toUser(const int qId, const int uId)
 		throw 4;
 	return q;
 }
-void DBmanager::update_answer(const Question& q){
+
+Question DBmanager::get_q_from_toUser(const int qId, const int uId)
+{
+	Question q;
+	/* pair to store question and bool whether exist or not */
+	try
+	{
+		q = get_question(qId);
+	}
+	catch(const int err)
+	{
+		throw;
+	}
+	/* check if q toId is the same as user id signifying user received question*/
+	if (q.getToId() != uId || q.getFromId() != uId)
+		throw 4;
+	return q;
+}
+
+void DBmanager::update_answer(const int qId, const std::string& ans){
 	const char* path = questionsdb.get_pathChar();
 	const char* tempPath = TEMPTXT_PATH;
 	const std::string del = questionsdb.get_delimiter();
-	const int id = q.getId();
 	std::vector<std::string> readLines, writeLines;
 	read_file_lines(path, readLines);
 
@@ -138,12 +156,48 @@ void DBmanager::update_answer(const Question& q){
 	{
 		std::vector<std::string> v;
 		split_line_toVector(line, v, del);
-		questionsdb.get_writeLines(writeLines, v, q, id);
+		questionsdb.get_writeLines(writeLines, v, ans, qId, ANSWER);
 	}
 	write_file_lines(tempPath, writeLines, false);
 	remove(path);
 	rename(tempPath, path);
 }
+
+//void DBmanager::del_q(const int qId, const int uId)
+//{
+//	Question q;
+//	/* user can only delete question asked or received by user */
+//	try
+//	{
+//		q = get_q_from_toUser(qId, uId);
+//	}
+//	catch(const int err)
+//	{
+//		throw;
+//	}
+//
+//
+//}
+
+//void DBmanager::del_q_from_file()
+//{
+//	const char* path = questionsdb.get_pathChar();
+//	const char* tempPath = TEMPTXT_PATH;
+//	const std::string del = questionsdb.get_delimiter();
+//	const int id = q.getId();
+//	std::vector<std::string> readLines, writeLines;
+//	read_file_lines(path, readLines);
+//
+//	for (auto const &line : readLines)
+//	{
+//		std::vector<std::string> v;
+//		split_line_toVector(line, v, del);
+//		questionsdb.get_writeLines(writeLines, v, q, id);
+//	}
+//	write_file_lines(tempPath, writeLines, false);
+//	remove(path);
+//	rename(tempPath, path);
+//}
 
 Question DBmanager::get_question(const int id)
 {

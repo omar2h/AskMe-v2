@@ -2077,3 +2077,60 @@ Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
 g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
 Info: Nothing to build for askme-oo
+16:38:39 **** Rebuild of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+In file included from ..\DBmanager.h:11,
+                 from ..\DBmanager.cpp:8:
+..\QuestionsDb.h:52:102: error: 'string' does not name a type; did you mean 'stdin'?
+   52 |         void get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const string& ans, const int qId, const int op);
+      |                                                                                                      ^~~~~~
+      |                                                                                                      stdin
+..\DBmanager.h:43:49: error: 'string' does not name a type; did you mean 'stdin'?
+   43 |         void update_answer(const int qId, const string& ans);
+      |                                                 ^~~~~~
+      |                                                 stdin
+..\DBmanager.cpp:148:52: error: 'string' does not name a type; did you mean 'stdin'?
+  148 | void DBmanager::update_answer(const int qId, const string& ans){
+      |                                                    ^~~~~~
+      |                                                    stdin
+16:39:30 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+In file included from ..\AppMainMenu.cpp:9:
+..\DBmanager.h:19: warning: "ANSWER" redefined
+   19 | #define ANSWER 1
+      | 
+In file included from ..\AppMainMenu.cpp:8:
+..\AppMainMenu.h:15: note: this is the location of the previous definition
+   15 | #define ANSWER 3
+      | 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o QuestionsDb.o "..\\QuestionsDb.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: AppMainMenu.o: in function `AppMainMenu::run(int, User&)':
+H:\Career\Courses\C-C++ Data Structures & Algorithms\Dr Mostafa Saad\01-Mastering 4 critical SKILLS using C++ 17\Projects\02-Askme OO Project\askme-oo\Debug/../AppMainMenu.cpp:39: undefined reference to `AppMainMenu::delete_question(int)'
+collect2.exe: error: ld returned 1 exit status
+16:40:05 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+In file included from ..\AppMainMenu.cpp:9:
+..\DBmanager.h:19: warning: "ANSWER" redefined
+   19 | #define ANSWER 1
+      | 
+In file included from ..\AppMainMenu.cpp:8:
+..\AppMainMenu.h:15: note: this is the location of the previous definition
+   15 | #define ANSWER 3
+      | 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+16:40:26 **** Incremental Build of configuration Debug for project askme-oo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Loginhandler.o "..\\Loginhandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Signuphandler.o "..\\Signuphandler.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o AppMainMenu.o "..\\AppMainMenu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DBmanager.o "..\\DBmanager.cpp" 
+g++ -o askme-oo.exe App.o AppMainMenu.o Authenticator.o DBmanager.o Error.o Inputscanner.o Loginhandler.o Menu_printer.o Question.o QuestionsDb.o Signuphandler.o User.o UsersDb.o main.o 
+Info: Nothing to build for askme-oo
+Info: Nothing to build for askme-oo

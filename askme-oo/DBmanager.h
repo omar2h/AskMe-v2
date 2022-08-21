@@ -37,8 +37,9 @@ public:
 	void get_Qs_to_user(const int uId, std::map<int, std::vector<Question>> &);
 	void get_Qs_from_user(const int uId, std::vector<Question> &qv);
 	Question get_q_toUser(const int qId, const int uId);
+	Question get_q_from_toUser(const int qId, const int uId);
 	Question get_question(const int id);
-	void update_answer(const Question&);
+	void update_answer(const int qId, const std::string& ans);
 	int generate_id(const std::string path);
 };
 

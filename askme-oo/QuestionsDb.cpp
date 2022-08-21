@@ -81,22 +81,25 @@ void QuestionsDb::update_question_info(const std::vector<std::string> &v, Questi
 	q.setAns(v[ANSWERTEXT]);
 }
 
-void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines, std::vector<std::string>& v, const Question& q, const int id)
+void QuestionsDb::get_writeLines(std::vector<std::string>& writeLines,  std::vector<std::string>& v, const std::string& ans, const int id, const int op)
 {
-	std::string writeLine = "";
+	std::string writeLine{};
+
 	if (stoi(v[ID]) == id)
 	{
-		writeLine += get_question_string(q);
-	}
-	else
-	{
-		for (int i = 0; i < (int)v.size(); i++)
+		if(op == ANSWER)
 		{
-			if (i)
-				writeLine += del;
-			writeLine += v[i];
+			v[ANSWERED_BOOL] = "1";
+			v[ANSWERTEXT] = ans;
 		}
 	}
+	for (int i = 0; i < (int)v.size(); i++)
+	{
+		if (i)
+			writeLine += del;
+		writeLine += v[i];
+	}
+
 	writeLines.push_back(writeLine);
 }
 

@@ -24,6 +24,7 @@ class AppMainMenu
 	void print_questions_received(const int uId);
 	void print_questions_asked(const int uId);
 	void answer(const int uId);
+	void delete_question(const int uId);
 
 public:
 	AppMainMenu();
