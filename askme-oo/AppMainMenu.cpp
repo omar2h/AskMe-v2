@@ -21,36 +21,43 @@ AppMainMenu::~AppMainMenu()
 	// TODO Auto-generated destructor stub
 }
 
-void AppMainMenu::run(int choice, User &user)
+int AppMainMenu::run(int choice, User &user)
 {
-	if (choice == PRINT_QUESTIONS_RECEIVED)
+	if (choice == LOGOUT)
+		return 0;
+	else
 	{
-		print_questions_received(user.getId());
+		if (choice == PRINT_QUESTIONS_RECEIVED)
+		{
+			print_questions_received(user.getId());
+		}
+		else if (choice == PRINT_QUESTIONS_ASKED)
+		{
+			print_questions_asked(user.getId());
+		}
+		else if (choice == ANSWER)
+		{
+			answer(user.getId());
+		}
+		else if (choice == DELETE)
+		{
+			delete_question(user.getId());
+		}
+		else if (choice == ASK)
+		{
+			ask(user.getId());
+		}
+		else if (choice == LIST_USERS)
+		{
+			list_users();
+		}
+		else if (choice == FEED)
+		{
+			print_feed();
+		}
+		return 1;
 	}
-	else if (choice == PRINT_QUESTIONS_ASKED)
-	{
-		print_questions_asked(user.getId());
-	}
-	else if (choice == ANSWER)
-	{
-		answer(user.getId());
-	}
-	else if (choice == DELETE)
-	{
-		delete_question(user.getId());
-	}
-	else if (choice == ASK)
-	{
-		ask(user.getId());
-	}
-	else if (choice == LIST_USERS)
-	{
-		list_users();
-	}
-	else if (choice == FEED)
-	{
-		print_feed();
-	}
+
 }
 
 void AppMainMenu::print_questions_received(const int uId)
@@ -94,6 +101,8 @@ void AppMainMenu::print_questions_asked(const int uId)
 	}
 }
 
+/* 1- user enter question to answer */
+/* 2- enter answer */
 void AppMainMenu::answer(const int uId)
 {
 	DBmanager DB;
@@ -159,6 +168,10 @@ void AppMainMenu::delete_question(const int uId)
 	std::cout << "\n\n ----- Question Deleted -----\n\n";
 }
 
+/* 1- user enter if of the other user to ask (toUser) */
+/* 2- check toUser exist in database */
+/* 3- check if toUser allow anon questions. if allow ask user to choose question to be anon or not */
+/* 4- enter question id if new enter -1 or id of existing q */
 void AppMainMenu::ask(const int uId)
 {
 	DBmanager DB;

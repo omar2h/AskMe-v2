@@ -33,7 +33,7 @@ public:
 	AppMainMenu();
 	virtual ~AppMainMenu();
 
-	void run(int choice, User &);
+	int run(int choice, User &);
 };
 
 #endif /* APPMAINMENU_H_ */
