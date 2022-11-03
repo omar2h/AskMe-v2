@@ -3,5 +3,5 @@
 #include <map>
 #include <vector>
 #include "Question.h"
-using GRAPH = std::map<int, std::vector<Question>>;
+using GRAPH = std::map<int, std::vector<int>>;
 #endif // __GRAPH_H__

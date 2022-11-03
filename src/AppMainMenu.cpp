@@ -51,10 +51,10 @@ void AppMainMenu::dfs(const GRAPH &graph, int key, std::unordered_set<int> &visi
 	visited.insert(key);
 	Question q = DB.get_q(key, uId, TO);
 	QuestionPrinter::printQuestion(q, spaces);
-	for (const Question &neighbourQuestion : graph.at(key))
+	for (const int &neighbourQuestionId : graph.at(key))
 	{
-		if (!visited.count(neighbourQuestion.getId()))
-			dfs(graph, neighbourQuestion.getId(), visited, DB, uId, spaces + 2);
+		if (!visited.count(neighbourQuestionId))
+			dfs(graph, neighbourQuestionId, visited, DB, uId, spaces + 2);
 	}
 }
 
@@ -63,7 +63,7 @@ void AppMainMenu::print_questions_received(const int uId) const
 	DBmanager DB;
 	/* adjacency list */
 	GRAPH graph;
-	/* Fill the map with all question the user received */
+	/* Build graph with all questions the user received */
 	DB.get_Qs_to_user(uId, graph);
 
 	Question q{};

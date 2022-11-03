@@ -29,22 +29,13 @@ std::string QuestionsDb::get_delimiter()
 
 void QuestionsDb::get_Q_toUser(const std::vector<std::string> &v, GRAPH &graph, const int uId)
 {
-	Question q;
 	if (!v[TO_ID].empty() && std::all_of(v[TO_ID].begin(), v[TO_ID].end(), ::isdigit) && stoi(v[TO_ID]) == uId)
 	{
-		update_question_info(v, q);
-		graph[q.getId()] = {};
-		if (q.getThreadId() != -1)
-		{
-			graph[q.getThreadId()].push_back(q);
-		}
-		// if (q.getThreadId() == -1)
-		// 	mp[q.getId()].push_back(q);
-		// else
-		// {
-		// 	mp[q.getId()].push_back(q);
-		// 	mp[q.getThreadId()].push_back(q);
-		// }
+		int qId = stoi(v[ID]);
+		int threadId = stoi(v[THREAD_ID]);
+		graph[qId] = {};
+		if (threadId != -1)
+			graph[threadId].push_back(qId);
 	}
 }
 
