@@ -1,18 +1,21 @@
 # AskMe-v2
-AskMe is a Ask.fm clone project. It is a social media platform where you may ask questions -anonymously- and answer questions from other individuals you may find interesting. This new version of the project is made of recfactoring the original one using OOP.  
+![image](https://user-images.githubusercontent.com/29601694/199635081-6be78934-359c-4447-8dea-5a41ffce9f51.png)
 
-## Key Points
-* Firstly, the user is offered a chance either to SignUp or LogIn.
-* Once the user has logged in successfully, A menu with a variety of options is presented for the user to choose from. This includes for example the option to ask, answer or delete questions, show questions received or asked, or show feed.
-* In this project we keep a record of all the users and all the questions which is easily accessed for authorized users.
+AskMe is a Ask.fm clone project. It is a social media platform where you may ask questions -anonymously- and answer questions from other individuals you may find interesting. This program is based on the Graph theory to store and print questions. 
+
+## Requirements
+1. User should be able to ask other users questions anonymously.
+2. User should be able to answer a question received.
+3. User should be able to print questions received.
+4. User should be able to print questions the user asked.
+5. User should be able to to delete any question received and questions the user asked.
 
 ## Backend
-The database is consisted of users and questions structures which are saved in two files users.txt and questions.txt.
+The database is consisted of users and questions classes which are saved in two files users.txt and questions.txt.
 * A User structure is composed of multiple variables: id, username, password and allowAnonymousQuestions.
 * A Question structure is composed of multiple variables and functions: id, threadId, fromId, toId, anonymous question?, answered?, question text, answer text.<br />
-Variables are saved in files in the above order separeted with a comma.<br />
-The frontend access the database using a structure called DbManager. Within the DbManager there are UsersDb and QuestionsDb.<br/>
-![image](https://user-images.githubusercontent.com/29601694/183284165-ea3968ba-b96c-45c8-a16d-82d4a762d287.png) ![image](https://user-images.githubusercontent.com/29601694/183284191-948550ae-a2a0-4308-8e1e-6b61d47259fa.png)
+Variables are saved in files separeted with a comma.<br />
+The frontend access the database using a class called DbManager. Within the DbManager there are UsersDb and QuestionsDb.<br/>
 
 ## Features
 1. Signup and LogIn. For the user to access the following features of the program the user has to be logged in. User choose either to signup or login.
@@ -25,34 +28,6 @@ The frontend access the database using a structure called DbManager. Within the 
 6. Ask questions. User can ask questions to other people firstly, the id of the ohter user to be asked is entered to check if exists. Then user choose to ask a fresh new question or enter an id of an existing question to be added in its thread.
 7. List users
 8. Print feed. Print only answered questions.
-
-## Main functions and PFFOP
-1. print_questions_received(user.id)
-2. print_questions_asked(user.id)
-3. answer(user.id)
-4. delete_question(user.id)
-5. ask(user)
-6. list_users();
-7. print_feed();
-* PFFOP* Award goes to print_quesions_received.<br/>
-![image](https://user-images.githubusercontent.com/29601694/183285540-f2eb3a34-713b-4275-8e68-958e6bbb3915.png)<br/>
-    * Function to print questions user received was the most challenging tbh/imo.
-    * Firslty declare a map variable mp of int(question id) and vector of questions.
-    * Then call DB.get_all_Qs_to_user(uId, mp) which fills each vector with question followed by any children question (questions in thread).
-    * For loop at each key and check whether the first item in the vector is a parent question not a child(not in a thread) then print it followed by any children question in the vector if any using print_children() function.
-    * And with every new child increase the space to create an indent.<br/><br/>
-![image](https://user-images.githubusercontent.com/29601694/183285877-038e6205-94ed-4b57-b65a-f3243cf4e515.png)
-
-### Honorable mentions
-* read_file_lines(std::string path, std::vector<std::string> &lines) and write_file_lines(std::string path, std::vector<std::string> &lines, bool append = true) in DbManager<br/>
-Read file takes the path of the file, read its lines and save each line in a vector of strings. It prevents redundant code just call it whenever you wanna access the database. Same for write file takes a vector of strings where each is a line and write in file. set append to false if you want to overwrite.
-* verify_choice(const int choice, const int low, const int high)<br/>
-Takes a choice and verify whether it is between the low and high also save code.
-###### PFFOP: Personal favorite Function Of the Project
-
-## Stuff to Improve
-* Error handling: may utilize exceptions and try catch blocks or error codes?
-* Parallel using of the program
 
 ## Run Run
 1. Choice of SignUp, Login or Exit.<br/>
