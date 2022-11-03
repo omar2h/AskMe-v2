@@ -1,0 +1,10 @@
+1,-1,4,2,0,1,how are ya?,good
+2,1,4,2,1,0,how old are ya?,
+3,1,4,2,0,1,how is school?,not bad
+4,-1,4,2,1,0,how much is kilo panneh?,
+6,-1,2,4,1,0,what do you do?,
+7,-1,3,3,0,0,how is the family?,
+8,-1,2,3,0,0,wanna meet?,
+9,-1,2,6,1,0,What do cows usually drink? milk or water,
+10,-1,2,3,0,0,what is your name?,
+11,-1,2,4,0,0,Are you married?,
