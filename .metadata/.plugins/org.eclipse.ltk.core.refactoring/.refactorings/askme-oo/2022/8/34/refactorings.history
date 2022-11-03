@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;askme-oo/Menu.h&apos; to &apos;Menu_printer.h&apos;" description="Rename resource &apos;Menu.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Menu.h" name="Menu_printer.h" stamp="1660742193386" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;askme-oo/Menu.cpp&apos; to &apos;Menu_printer.cpp&apos;" description="Rename resource &apos;Menu.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Menu.cpp" name="Menu_printer.cpp" stamp="1660742263464" updateReferences="true"/>
-</session>
