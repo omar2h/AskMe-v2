@@ -1,7 +1,7 @@
 # AskMe-v2
 ![image](https://user-images.githubusercontent.com/29601694/199635081-6be78934-359c-4447-8dea-5a41ffce9f51.png)
 
-AskMe is a Ask.fm clone project. It is a social media platform where you may ask questions -anonymously- and answer questions from other individuals you may find interesting. This program is based on the Graph theory to print questions. 
+AskMe is a Ask.fm clone project. It is a social media platform where you may ask questions -anonymously- and answer questions from other individuals you may find interesting. This a file-based program using OOP concepts and applying the graph theory and traversal to display the questions threads.
 
 ## Requirements
 1. User should be able to ask other users questions anonymously.
